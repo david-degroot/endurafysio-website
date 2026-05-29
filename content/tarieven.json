@@ -1,0 +1,14 @@
+{
+  "fysio": [
+    { "omschrijving": "Intake & onderzoek (60 min)", "prijs": "€ 75" },
+    { "omschrijving": "Behandeling (45 min)", "prijs": "€ 58" },
+    { "omschrijving": "Korte behandeling (30 min)", "prijs": "€ 42" }
+  ],
+  "lgt": [
+    { "omschrijving": "Kennismakingsgesprek (30 min)", "prijs": "Gratis" },
+    { "omschrijving": "Sessie (60 min)", "prijs": "€ 85" },
+    { "omschrijving": "Sessie (75 min)", "prijs": "€ 100" },
+    { "omschrijving": "SSP – volledig traject (5 sessies)", "prijs": "€ 375" },
+    { "omschrijving": "Integraal traject (op maat)", "prijs": "Op aanvraag" }
+  ]
+}

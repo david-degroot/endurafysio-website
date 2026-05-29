@@ -1,0 +1,68 @@
+backend:
+  name: github
+  repo: david-degroot/endurafysio-website
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "algemeen"
+    label: "Algemene gegevens"
+    files:
+      - name: "algemeen"
+        label: "Contactgegevens & praktijkinfo"
+        file: "content/algemeen.json"
+        fields:
+          - { label: "Praktijknaam", name: "praktijknaam", widget: "string" }
+          - { label: "Tagline (onder de naam)", name: "tagline", widget: "string" }
+          - { label: "Stad", name: "stad", widget: "string" }
+          - { label: "Adres", name: "adres", widget: "string" }
+          - { label: "Postcode + plaats", name: "postcode", widget: "string" }
+          - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+          - { label: "E-mailadres", name: "email", widget: "string" }
+          - { label: "Hero ondertitel", name: "hero_sub", widget: "text" }
+
+  - name: "over_mij"
+    label: "Over mij"
+    files:
+      - name: "over_mij"
+        label: "Over mij tekst"
+        file: "content/over_mij.json"
+        fields:
+          - { label: "Citaat", name: "citaat", widget: "string" }
+          - { label: "Alinea 1", name: "alinea1", widget: "text" }
+          - { label: "Alinea 2", name: "alinea2", widget: "text" }
+          - { label: "Alinea 3", name: "alinea3", widget: "text" }
+
+  - name: "fysiotherapie"
+    label: "Fysiotherapie"
+    files:
+      - name: "fysiotherapie"
+        label: "Fysiotherapie tekst"
+        file: "content/fysiotherapie.json"
+        fields:
+          - { label: "Intro (vetgedrukt)", name: "intro", widget: "text" }
+          - { label: "Alinea 1", name: "alinea1", widget: "text" }
+          - { label: "Alinea 2", name: "alinea2", widget: "text" }
+          - { label: "Alinea 3", name: "alinea3", widget: "text" }
+
+  - name: "tarieven"
+    label: "Tarieven"
+    files:
+      - name: "tarieven"
+        label: "Tarieven fysiotherapie & LGT"
+        file: "content/tarieven.json"
+        fields:
+          - label: "Fysiotherapie tarieven"
+            name: "fysio"
+            widget: "list"
+            fields:
+              - { label: "Omschrijving", name: "omschrijving", widget: "string" }
+              - { label: "Prijs", name: "prijs", widget: "string" }
+          - label: "Lichaamsgerichte therapie tarieven"
+            name: "lgt"
+            widget: "list"
+            fields:
+              - { label: "Omschrijving", name: "omschrijving", widget: "string" }
+              - { label: "Prijs", name: "prijs", widget: "string" }
