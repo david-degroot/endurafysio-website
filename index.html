@@ -246,9 +246,9 @@
     <p class="section-label">Over mij</p>
     <h2 class="section-title">Wie staat er<br><em>voor je klaar?</em></h2>
     <blockquote class="over-quote" id="cms-citaat">"Ik geloof dat echt herstel begint wanneer lichaam én geest samenwerken."</blockquote>
-    <p id="cms-over-alinea1">Vul hier jouw persoonlijke verhaal in.</p>
-    <p id="cms-over-alinea2">Ik ben fysiotherapeut en lichaamsgerichte therapeut met een passie voor integraal werken.</p>
-    <p id="cms-over-alinea3">In mijn praktijk in Arnhem begeleid ik mensen met chronische klachten naar meer vitaliteit en veerkracht.</p>
+    <p id="cms-over-alinea1">Vul hier jouw persoonlijke verhaal in: je achtergrond, je opleiding, waarom je voor deze aanpak hebt gekozen. Wat drijft jou? Wat maakt jouw praktijk anders?</p>
+    <p id="cms-over-alinea2">Ik ben fysiotherapeut en lichaamsgerichte therapeut met een passie voor integraal werken. Na jaren in de reguliere fysiotherapie groeide mijn interesse in therapievormen die verder gaan dan het symptoom — en die de wijsheid van het lichaam als vertrekpunt nemen.</p>
+    <p id="cms-over-alinea3">In mijn praktijk in Arnhem begeleid ik mensen met chronische klachten, spanning, pijn en traumagerelateerde klachten naar meer vitaliteit en veerkracht.</p>
     <a href="#contact" class="btn-primary" style="margin-top:1rem;">Maak kennis</a>
   </div>
 </section>
@@ -269,10 +269,10 @@
   <h2 class="section-title" style="color:var(--cream)">Meer dan behandelen.<br><em>Begeleiden.</em></h2>
   <div class="fysio-grid">
     <div class="fysio-vision reveal">
-      <p class="section-intro" id="cms-fysio-intro">Fysiotherapie is een erkende, BIG-geregistreerde zorgvorm — wezenlijk anders dan de lichaamsgerichte therapie elders op deze website.</p>
-      <p id="cms-fysio-alinea1">Mijn aanpak wijkt bewust af van het klassieke protocol.</p>
-      <p id="cms-fysio-alinea2">Ik geloof dat duurzaam herstel vraagt om aandacht voor de bredere context.</p>
-      <p id="cms-fysio-alinea3">Mijn praktijk is erkend door de beroepsvereniging.</p>
+      <p class="section-intro" id="cms-fysio-intro">Fysiotherapie is een erkende, BIG-geregistreerde zorgvorm — wezenlijk anders dan de lichaamsgerichte therapie elders op deze website, en met een eigen vergoedingsstructuur.</p>
+      <p id="cms-fysio-alinea1">Mijn aanpak van fysiotherapie wijkt bewust af van het klassieke protocol. Ik werk met reguliere technieken — manuele therapie, oefentherapie, dry needling — maar altijd vanuit een diepere luisterhouding. Wat zegt het lichaam eigenlijk? Waar komt de klacht vandaan?</p>
+      <p id="cms-fysio-alinea2">Ik geloof dat duurzaam herstel vraagt om aandacht voor de bredere context: leefstijl, stress, ademhaling en bewustzijn.</p>
+      <p id="cms-fysio-alinea3">Mijn praktijk is erkend door de beroepsvereniging en werkt samen met de meeste zorgverzekeraars.</p>
       <a href="#contact" class="btn-secondary" style="margin-top:1.5rem; border-color: var(--cream); color: var(--cream);">Vraag een kennismakingsgesprek aan</a>
     </div>
     <div class="fysio-pillars reveal">
@@ -383,11 +383,11 @@
     <div class="contact-details">
       <div class="contact-item">
         <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M2 4 L8 9 L14 4 M2 4 H14 V12 H2 Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><p class="contact-item-label">E-mail</p><p class="contact-item-value"><a href="#" id="cms-email-link" id="cms-email">info@endurafysio.nl</a></p></div>
+        <div><p class="contact-item-label">E-mail</p><p class="contact-item-value"><a href="mailto:info@endurafysio.nl" id="cms-email">info@endurafysio.nl</a></p></div>
       </div>
       <div class="contact-item">
         <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 2 C3 2 2 3 2 5 C2 9 7 14 11 14 C13 14 14 13 14 13 L11.5 10 L9.5 10.5 C9.5 10.5 7.5 8.5 7 6.5 L8 4.5 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
-        <div><p class="contact-item-label">Telefoon</p><p class="contact-item-value"><a href="#" id="cms-telefoon-link" id="cms-telefoon">06 00 000 000</a></p></div>
+        <div><p class="contact-item-label">Telefoon</p><p class="contact-item-value"><a href="tel:0600000000" id="cms-telefoon">06 00 000 000</a></p></div>
       </div>
       <div class="contact-item">
         <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2 C5.8 2 4 3.8 4 6 C4 9 8 14 8 14 C8 14 12 9 12 6 C12 3.8 10.2 2 8 2 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg></div>
@@ -452,60 +452,6 @@
     e.target.reset();
   }
 
-  // ── CMS content loader ──
-  async function loadCMS() {
-    try {
-      const [algemeen, overMij, fysio, tarieven] = await Promise.all([
-        fetch('/content/algemeen.json').then(r => r.json()),
-        fetch('/content/over_mij.json').then(r => r.json()),
-        fetch('/content/fysiotherapie.json').then(r => r.json()),
-        fetch('/content/tarieven.json').then(r => r.json())
-      ]);
-
-      // Algemeen
-      document.getElementById('cms-stad').textContent = `Solopraktijk · ${algemeen.stad}`;
-      document.getElementById('cms-tagline').textContent = algemeen.tagline;
-      document.getElementById('cms-hero-sub').textContent = algemeen.hero_sub;
-      document.getElementById('cms-adres').innerHTML = `${algemeen.adres}<br>${algemeen.postcode}`;
-      const emailEl = document.getElementById('cms-email-link');
-      emailEl.textContent = algemeen.email;
-      emailEl.href = `mailto:${algemeen.email}`;
-      const telEl = document.getElementById('cms-telefoon-link');
-      telEl.textContent = algemeen.telefoon;
-      telEl.href = `tel:${algemeen.telefoon.replace(/\s/g,'')}`;
-      document.getElementById('cms-footer-naam').textContent = algemeen.praktijknaam;
-      document.getElementById('cms-footer-info').innerHTML =
-        `© ${new Date().getFullYear()} ${algemeen.praktijknaam} · ${algemeen.stad} · <a href="mailto:${algemeen.email}">${algemeen.email}</a>`;
-
-      // Over mij
-      document.getElementById('cms-citaat').textContent = `"${overMij.citaat}"`;
-      document.getElementById('cms-over-alinea1').textContent = overMij.alinea1;
-      document.getElementById('cms-over-alinea2').textContent = overMij.alinea2;
-      document.getElementById('cms-over-alinea3').textContent = overMij.alinea3;
-
-      // Fysiotherapie
-      document.getElementById('cms-fysio-intro').textContent = fysio.intro;
-      document.getElementById('cms-fysio-alinea1').textContent = fysio.alinea1;
-      document.getElementById('cms-fysio-alinea2').textContent = fysio.alinea2;
-      document.getElementById('cms-fysio-alinea3').textContent = fysio.alinea3;
-
-      // Tarieven fysio
-      const fysioTable = document.getElementById('cms-tarieven-fysio');
-      fysioTable.innerHTML = tarieven.fysio.map(r =>
-        `<tr><td>${r.omschrijving}</td><td>${r.prijs}</td></tr>`).join('');
-
-      // Tarieven LGT
-      const lgtTable = document.getElementById('cms-tarieven-lgt');
-      lgtTable.innerHTML = tarieven.lgt.map(r =>
-        `<tr><td>${r.omschrijving}</td><td>${r.prijs}</td></tr>`).join('');
-
-    } catch(e) {
-      // Fallback: statische tekst blijft zichtbaar als JSON niet geladen kan worden
-      console.log('CMS content niet beschikbaar, statische tekst wordt getoond.');
-    }
-  }
-
-  loadCMS();
 </script>
 </body>
 </html>
