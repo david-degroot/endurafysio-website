@@ -7,21 +7,21 @@
   <meta name="description" content="Solopraktijk voor lichaamsgerichte therapie en fysiotherapie. Oefenmethode Brouw, FOI, Body Stress Release, Antroposofische fysiotherapie en SSP." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --cream: #F7F2EC; --cream-dark: #EDE5D8; --warm-brown: #8B6B4A;
-      --warm-brown-light: #B8936A; --deep-brown: #3D2B1F; --text-main: #2E1F14;
+      --warm-brown-light: #B8936A; --deep-brown: #4A3526; --text-main: #2E1F14;
       --text-muted: #7A6052; --text-light: #A08068; --sage: #7A9070;
       --sage-light: #A8B89E; --white: #FDFAF6; --nav-height: 72px;
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-main); font-weight: 300; font-size: 16px; line-height: 1.75; }
+    html { scroll-behavior: smooth; font-size: 80%; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--cream); color: var(--text-main); font-weight: 300; font-size: 1rem; line-height: 1.75; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); background: rgba(247,242,236,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(139,107,74,0.15); display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; z-index: 100; }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--deep-brown); text-decoration: none; }
+    .nav-logo { font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 500; color: var(--deep-brown); text-decoration: none; }
     .nav-logo span { color: var(--warm-brown); }
     .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
     .nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; padding: 0.25rem 0.85rem; }
@@ -40,7 +40,7 @@
     #hero { min-height: 100vh; padding-top: var(--nav-height); display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
     .hero-text { padding: 8vh 5vw 8vh 8vw; }
     .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-brown); margin-bottom: 1.5rem; display: block; }
-    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,4.5rem); font-weight: 300; line-height: 1.12; color: var(--deep-brown); margin-bottom: 1.75rem; }
+    .hero-title { font-family: 'Merriweather', serif; font-size: clamp(2.8rem,5vw,4.5rem); font-weight: 300; line-height: 1.12; color: var(--deep-brown); margin-bottom: 1.75rem; }
     .hero-title em { font-style: italic; color: var(--warm-brown); }
     .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 440px; margin-bottom: 2.5rem; line-height: 1.8; }
     .hero-visual { background: var(--cream-dark); height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -48,7 +48,7 @@
     .hero-shape::before { content: ''; position: absolute; inset: -20px; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; border: 1px solid rgba(139,107,74,0.2); }
     .hero-icon-wrap { text-align: center; }
     .hero-icon-wrap svg { width: 80px; height: 80px; opacity: 0.35; }
-    .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--text-muted); margin-top: 1rem; }
+    .hero-tagline { font-family: 'Merriweather', serif; font-size: 1rem; font-style: italic; color: var(--text-muted); margin-top: 1rem; }
 
     /* BUTTONS */
     .btn-primary { display: inline-block; background: var(--warm-brown); color: var(--white); text-decoration: none; padding: 0.85rem 2rem; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; transition: background 0.2s, transform 0.2s; }
@@ -59,18 +59,26 @@
     /* SECTIONS */
     section { padding: 6rem 8vw; }
     .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-brown-light); margin-bottom: 0.75rem; display: block; }
-    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3rem); font-weight: 400; color: var(--deep-brown); line-height: 1.2; margin-bottom: 1rem; }
+    .section-title { font-family: 'Merriweather', serif; font-size: clamp(2rem,3.5vw,3rem); font-weight: 400; color: var(--deep-brown); line-height: 1.2; margin-bottom: 1rem; }
     .section-title em { font-style: italic; color: var(--warm-brown); }
     .section-intro { font-size: 1rem; color: var(--text-muted); max-width: 580px; line-height: 1.9; margin-bottom: 3.5rem; }
 
     /* OVER MIJ */
-    #over-mij { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .over-portrait { background: var(--cream-dark); aspect-ratio: 3/4; border-radius: 4px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .portrait-placeholder { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-    .portrait-placeholder svg { width: 80px; height: 80px; opacity: 0.25; }
-    .portrait-placeholder p { font-size: 0.8rem; color: var(--text-light); text-align: center; padding: 0 2rem; }
-    .over-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; font-weight: 300; color: var(--warm-brown); line-height: 1.5; border-left: 2px solid var(--warm-brown-light); padding-left: 1.5rem; margin: 2rem 0; }
+    #over-mij { background: var(--white); display: grid; grid-template-columns: 160px 1fr; gap: 3rem; align-items: start; }
+    .over-portrait { background: var(--cream-dark); width: 140px; height: 140px; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; margin-top: 0.75rem; }
+    .portrait-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .portrait-placeholder svg { width: 52px; height: 52px; opacity: 0.25; }
+    .portrait-placeholder p { display: none; }
+    .over-quote { font-family: 'Merriweather', serif; font-size: 1.5rem; font-style: italic; font-weight: 300; color: var(--warm-brown); line-height: 1.5; border-left: 2px solid var(--warm-brown-light); padding-left: 1.5rem; margin: 2rem 0; }
     .over-text p { color: var(--text-muted); margin-bottom: 1rem; }
+
+    /* CV TIJDLIJN */
+    .cv-section { margin-top: 2.5rem; border-top: 1px solid var(--cream-dark); padding-top: 2rem; }
+    .cv-timeline { list-style: none; position: relative; padding: 0; margin-top: 0.75rem; }
+    .cv-timeline::before { content: ''; position: absolute; left: 50px; top: 6px; bottom: 6px; width: 1px; background: var(--cream-dark); }
+    .cv-item { display: flex; padding: 0.55rem 0; align-items: baseline; }
+    .cv-jaar { font-family: 'Merriweather', serif; font-size: 0.9rem; color: var(--warm-brown); font-weight: 500; min-width: 50px; text-align: right; flex-shrink: 0; }
+    .cv-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; padding-left: 1.5rem; }
 
     /* DISCIPLINE BANNERS */
     .discipline-banner { padding: 2.5rem 8vw; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
@@ -79,7 +87,7 @@
     .disc-badge { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; padding: 0.35rem 0.9rem; border-radius: 2px; white-space: nowrap; }
     .discipline-banner-lgt .disc-badge { background: rgba(255,255,255,0.22); color: var(--white); }
     .discipline-banner-fysio .disc-badge { background: var(--warm-brown); color: var(--white); }
-    .disc-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem,2.2vw,1.8rem); font-weight: 400; color: var(--white); }
+    .disc-heading { font-family: 'Merriweather', serif; font-size: clamp(1.3rem,2.2vw,1.8rem); font-weight: 400; color: var(--white); }
     .disc-meta { margin-left: auto; font-size: 0.8rem; line-height: 1.65; text-align: right; max-width: 310px; }
     .discipline-banner-lgt .disc-meta { color: rgba(255,255,255,0.62); }
     .discipline-banner-fysio .disc-meta { color: rgba(237,229,216,0.52); }
@@ -92,13 +100,13 @@
     .therapie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 1.5rem; }
     .therapie-card { background: var(--white); border: 1px solid rgba(139,107,74,0.12); border-radius: 4px; padding: 2rem; transition: border-color 0.3s, transform 0.3s; cursor: pointer; }
     .therapie-card:hover { border-color: var(--sage-light); transform: translateY(-3px); }
-    .card-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--cream-dark); line-height: 1; margin-bottom: 0.5rem; }
-    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--deep-brown); margin-bottom: 0.5rem; }
+    .card-number { font-family: 'Merriweather', serif; font-size: 3.5rem; font-weight: 300; color: var(--cream-dark); line-height: 1; margin-bottom: 0.5rem; }
+    .card-title { font-family: 'Merriweather', serif; font-size: 1.4rem; font-weight: 500; color: var(--deep-brown); margin-bottom: 0.5rem; }
     .card-subtitle { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
     .card-text { font-size: 0.93rem; color: var(--text-muted); line-height: 1.8; }
     .card-detail { display: none; margin-top: 1rem; font-size: 0.88rem; color: var(--text-light); border-top: 1px solid var(--cream-dark); padding-top: 1rem; line-height: 1.75; }
     .therapie-card.open .card-detail { display: block; }
-    .card-toggle { margin-top: 1.25rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); cursor: pointer; display: flex; align-items: center; gap: 0.4rem; background: none; border: none; font-family: 'Jost', sans-serif; padding: 0; }
+    .card-toggle { margin-top: 1.25rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); cursor: pointer; display: flex; align-items: center; gap: 0.4rem; background: none; border: none; font-family: 'Open Sans', sans-serif; padding: 0; }
     .card-toggle svg { width: 14px; height: 14px; transition: transform 0.3s; }
     .therapie-card.open .card-toggle svg { transform: rotate(180deg); }
 
@@ -111,7 +119,7 @@
     .fysio-vision .section-intro { color: rgba(247,242,236,0.75); margin-bottom: 2rem; }
     .fysio-pillars { display: flex; flex-direction: column; gap: 1.25rem; }
     .pillar { border-left: 2px solid var(--warm-brown); padding-left: 1.25rem; }
-    .pillar-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--cream); margin-bottom: 0.25rem; }
+    .pillar-title { font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 500; color: var(--cream); margin-bottom: 0.25rem; }
     .pillar-text { font-size: 0.88rem; color: rgba(247,242,236,0.6); line-height: 1.7; }
 
     /* TARIEVEN */
@@ -132,7 +140,7 @@
     .tarief-table td:last-child { text-align: right; font-weight: 400; color: var(--deep-brown); }
     .tarief-note { font-size: 0.82rem; color: var(--text-light); margin-top: 1rem; line-height: 1.7; }
     .vergoeding-block { background: var(--cream); border-radius: 4px; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .vergoeding-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--deep-brown); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem; }
+    .vergoeding-item h4 { font-family: 'Merriweather', serif; font-size: 1.15rem; color: var(--deep-brown); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem; }
     .vergoeding-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
     .vd-fysio { background: var(--warm-brown); }
     .vd-lgt { background: var(--sage); }
@@ -145,11 +153,11 @@
     .contact-form-wrap { display: flex; flex-direction: column; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-group label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
-    .form-group input, .form-group select, .form-group textarea { background: var(--white); border: 1px solid rgba(139,107,74,0.2); border-radius: 2px; padding: 0.75rem 1rem; font-family: 'Jost', sans-serif; font-size: 0.93rem; font-weight: 300; color: var(--text-main); outline: none; transition: border-color 0.2s; }
+    .form-group input, .form-group select, .form-group textarea { background: var(--white); border: 1px solid rgba(139,107,74,0.2); border-radius: 2px; padding: 0.75rem 1rem; font-family: 'Open Sans', sans-serif; font-size: 0.93rem; font-weight: 300; color: var(--text-main); outline: none; transition: border-color 0.2s; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--warm-brown); }
     .form-group textarea { resize: vertical; min-height: 120px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-submit { background: var(--warm-brown); color: var(--white); padding: 0.9rem 2.5rem; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; border: none; cursor: pointer; font-family: 'Jost', sans-serif; transition: background 0.2s; margin-top: 0.5rem; }
+    .form-submit { background: var(--warm-brown); color: var(--white); padding: 0.9rem 2.5rem; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; border: none; cursor: pointer; font-family: 'Open Sans', sans-serif; transition: background 0.2s; margin-top: 0.5rem; }
     .form-submit:hover { background: var(--deep-brown); }
     .contact-info { padding-top: 0.5rem; }
     .contact-info > p { font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 2rem; }
@@ -163,7 +171,7 @@
 
     /* FOOTER */
     footer { background: var(--deep-brown); color: rgba(247,242,236,0.5); padding: 2.5rem 8vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; }
-    footer .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); font-weight: 500; }
+    footer .footer-logo { font-family: 'Merriweather', serif; font-size: 1.2rem; color: var(--cream); font-weight: 500; }
     footer a { color: rgba(247,242,236,0.5); text-decoration: none; }
     footer a:hover { color: var(--cream); }
 
@@ -174,7 +182,7 @@
     /* MOBILE */
     @media (max-width: 900px) {
       #hero { grid-template-columns: 1fr; } .hero-visual { display: none; } .hero-text { padding: 6vh 6vw; }
-      #over-mij { grid-template-columns: 1fr; } .over-portrait { display: none; }
+      #over-mij { grid-template-columns: 1fr; gap: 1.5rem; } .over-portrait { width: 90px; height: 90px; margin: 0 auto; }
       .fysio-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .tarieven-columns { grid-template-columns: 1fr; } .vergoeding-block { grid-template-columns: 1fr; }
       #contact { grid-template-columns: 1fr; } section { padding: 4rem 6vw; }
@@ -250,6 +258,14 @@
     <p id="cms-over-alinea2">In mijn praktijk in Arnhem en Nijmegen begeleid ik mensen met (chronische) klachten, spanning en pijn naar meer vitaliteit en veerkracht. Ik maak gebruik van verschillende behandelmethoden maar werk altijd individugericht en houd rekening met jouw persoonlijke omstandigheden en biografie.</p>
     <p id="cms-over-alinea3">Ik ben geen traumatherapeut maar heb mij op verschillende manieren geschoold om traumasensitief te werken.</p>
     <a href="#contact" class="btn-primary" style="margin-top:1rem;">Maak kennis</a>
+    <div class="cv-section">
+      <p class="section-label">Achtergrond &amp; opleiding</p>
+      <ul class="cv-timeline" id="cms-cv-list">
+        <li class="cv-item"><span class="cv-jaar">20XX</span><span class="cv-desc">Opleiding Fysiotherapie, [instelling]</span></li>
+        <li class="cv-item"><span class="cv-jaar">20XX</span><span class="cv-desc">Certificering Methode Brouw</span></li>
+        <li class="cv-item"><span class="cv-jaar">20XX</span><span class="cv-desc">Start eigen praktijk Endura</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -257,7 +273,7 @@
 <div class="discipline-banner discipline-banner-fysio">
   <span class="disc-badge">Discipline 1 van 2</span>
   <span class="disc-heading">Fysiotherapie</span>
-  <span class="disc-meta">
+  <span class="disc-meta" id="cms-banner-fysio-meta">
     <strong>Vergoed via zorgverzekeraar</strong>
     BIG-geregistreerd, gedeclareerd met AGB-code. Vergoeding afhankelijk van jouw aanvullende pakket.
   </span>
@@ -275,7 +291,7 @@
       <p id="cms-fysio-alinea3">Mijn praktijk is erkend door de beroepsvereniging en het kwaliteitsregister. Ik werk zonder contract met de zorgverzekeraars — dat betekent niet dat u geen recht op vergoeding hebt. Met een aanvullende verzekering kunt u de nota indienen bij uw verzekeraar en krijgt u een deel vergoed.</p>
       <a href="#contact" class="btn-secondary" style="margin-top:1.5rem; border-color: var(--cream); color: var(--cream);">Vraag een kennismakingsgesprek aan</a>
     </div>
-    <div class="fysio-pillars reveal">
+    <div class="fysio-pillars reveal" id="cms-pillars-container">
       <div class="pillar"><div class="pillar-title">Erkende zorgvorm</div><div class="pillar-text">BIG-geregistreerd en te declareren bij de zorgverzekeraar met AGB-code. Gescheiden van de lichaamsgerichte therapie.</div></div>
       <div class="pillar"><div class="pillar-title">Zonder contract, mét vergoeding</div><div class="pillar-text">Ik werk zonder contract met zorgverzekeraars. Met een aanvullende verzekering kunt u de nota indienen en krijgt u 60% tot 100% vergoed, afhankelijk van uw polis.</div></div>
       <div class="pillar"><div class="pillar-title">Actief herstel</div><div class="pillar-text">Je wordt eigenaar van je herstelproces. Oefeningen en inzichten neem je mee naar huis.</div></div>
@@ -288,7 +304,7 @@
 <div class="discipline-banner discipline-banner-lgt">
   <span class="disc-badge">Discipline 2 van 2</span>
   <span class="disc-heading">Lichaamsgerichte therapie</span>
-  <span class="disc-meta">
+  <span class="disc-meta" id="cms-banner-lgt-meta">
     <strong>Niet vergoed via basisverzekering</strong>
     Wordt apart gefactureerd als complementaire zorg. Mogelijk (deels) vergoed via aanvullend pakket.
   </span>
@@ -299,7 +315,7 @@
   <p class="section-label reveal">Lichaamsgerichte therapie · 5 methoden</p>
   <h2 class="section-title reveal">Vijf wegen naar<br><em>dieper herstel</em></h2>
   <p class="section-intro reveal">Lichaamsgerichte therapie werkt vanuit de overtuiging dat ons lichaam ervaringen opslaat die de geest niet altijd kan bereiken.</p>
-  <div class="therapie-grid">
+  <div class="therapie-grid" id="cms-therapie-grid">
     <div class="therapie-card reveal" onclick="toggleCard(this)">
       <div class="card-number">01</div><div class="card-title">Oefenmethode Brouw</div><div class="card-subtitle">Beweging & zelfregulatie</div>
       <p class="card-text">Een actieve lichaamsgerichte methode gericht op het herstellen van natuurlijke bewegingspatronen.</p>
@@ -346,7 +362,7 @@
         <tr><td>Behandeling (45 min)</td><td>€ 58</td></tr>
         <tr><td>Korte behandeling (30 min)</td><td>€ 42</td></tr>
       </table>
-      <p class="tarief-note">Zonder contract met zorgverzekeraars. Nota indienen bij aanvullende verzekering — vergoeding 60-100% afhankelijk van polis. BIG: 49033723204 · AGB-zorgverlener: 04-105104 · AGB-praktijk: 04-059750</p>
+      <p class="tarief-note" id="cms-fysio-note">Zonder contract met zorgverzekeraars. Nota indienen bij aanvullende verzekering — vergoeding 60-100% afhankelijk van polis. BIG: 49033723204 · AGB-zorgverlener: 04-105104 · AGB-praktijk: 04-059750</p>
     </div>
     <div class="tarief-blok tarief-blok-lgt">
       <p class="tarief-blok-label">Lichaamsgerichte therapie</p>
@@ -357,18 +373,18 @@
         <tr><td>SSP – volledig traject (5 sessies)</td><td>€ 375</td></tr>
         <tr><td>Integraal traject (op maat)</td><td>Op aanvraag</td></tr>
       </table>
-      <p class="tarief-note">Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket. Geregistreerd bij VBAG, RBCZ en NVAZ · AGB: 90-102929 · Praktijk: 90-062320</p>
+      <p class="tarief-note" id="cms-lgt-note">Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket. Geregistreerd bij VBAG, RBCZ en NVAZ · AGB: 90-102929 · Praktijk: 90-062320</p>
     </div>
   </div>
   <div class="vergoeding-block reveal">
     <div class="vergoeding-item">
-      <h4><span class="vergoeding-dot vd-fysio"></span>Fysiotherapie &amp; verzekering</h4>
-      <p>Vergoed vanuit de aanvullende verzekering. De hoogte is afhankelijk van jouw polis. Ik ben geregistreerd bij:</p>
+      <h4><span class="vergoeding-dot vd-fysio"></span><span id="cms-verg-fysio-titel">Fysiotherapie &amp; verzekering</span></h4>
+      <p id="cms-verg-fysio-tekst">Vergoed vanuit de aanvullende verzekering. De hoogte is afhankelijk van jouw polis. Ik ben geregistreerd bij:</p>
       <div class="vergoeding-badges"><span class="badge">KNGF</span><span class="badge">BIG-register</span><span class="badge">Vektis</span><span class="badge">AGB-code</span></div>
     </div>
     <div class="vergoeding-item">
-      <h4><span class="vergoeding-dot vd-lgt"></span>Lichaamsgerichte therapie &amp; verzekering</h4>
-      <p>Valt buiten de reguliere zorgverzekering. Veel aanvullende pakketten bieden wel vergoeding voor complementaire zorg.</p>
+      <h4><span class="vergoeding-dot vd-lgt"></span><span id="cms-verg-lgt-titel">Lichaamsgerichte therapie &amp; verzekering</span></h4>
+      <p id="cms-verg-lgt-tekst">Valt buiten de reguliere zorgverzekering. Veel aanvullende pakketten bieden wel vergoeding voor complementaire zorg.</p>
       <a href="#contact" class="btn-primary" style="margin-top:1rem; display:inline-block; font-size:0.78rem;">Vraag stellen</a>
     </div>
   </div>
@@ -392,6 +408,17 @@
       <div class="contact-item">
         <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2 C5.8 2 4 3.8 4 6 C4 9 8 14 8 14 C8 14 12 9 12 6 C12 3.8 10.2 2 8 2 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg></div>
         <div><p class="contact-item-label">Adres</p><p class="contact-item-value" id="cms-adres">Arnhem / Nijmegen (op aanvraag)</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="13" cy="3" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="13" cy="13" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7.2 L11.5 3.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M4.5 8.8 L11.5 12.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <div>
+          <p class="contact-item-label">Social media</p>
+          <p class="contact-item-value">
+            <a href="#" id="cms-linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            &nbsp;·&nbsp;
+            <a href="#" id="cms-facebook-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -426,7 +453,7 @@
 <footer>
   <span class="footer-logo" id="cms-footer-naam">Endura</span>
   <span id="cms-footer-info">© 2025 Endura · Arnhem · <a href="mailto:info@endurafysio.nl">info@endurafysio.nl</a></span>
-  <span><a href="#">Privacyverklaring</a> · <a href="#">Klachtenregeling</a></span>
+  <span><a href="privacy.pdf" target="_blank">Privacyverklaring</a> · <a href="klachtenregeling.pdf" target="_blank">Klachtenregeling</a> · <a href="behandelovereenkomst.pdf" target="_blank">Behandelovereenkomst</a></span>
 </footer>
 
 <script>
@@ -457,7 +484,7 @@
   // Each fetch is independent: a single failure leaves all other sections intact.
   async function loadCMS() {
 
-    // algemeen.json → hero, contact, footer
+    // algemeen.json → hero, contact, footer, discipline-banners
     try {
       const res = await fetch('content/algemeen.json');
       if (!res.ok) throw new Error(res.status);
@@ -478,8 +505,31 @@
         if (el) el.textContent = d.adres;
       }
       if (d.praktijknaam) {
-        const el = document.getElementById('cms-footer-naam');
-        if (el) el.textContent = d.praktijknaam;
+        const naam = document.getElementById('cms-footer-naam');
+        if (naam) naam.textContent = d.praktijknaam;
+        const info = document.getElementById('cms-footer-info');
+        if (info) {
+          const email = d.email || 'info@endurafysio.nl';
+          const stad  = d.stad  || 'Arnhem';
+          const jaar  = new Date().getFullYear();
+          info.innerHTML = `© ${jaar} ${d.praktijknaam} · ${stad} · <a href="mailto:${email}">${email}</a>`;
+        }
+      }
+      if (d.linkedin_url) {
+        const el = document.getElementById('cms-linkedin-link');
+        if (el) el.href = d.linkedin_url;
+      }
+      if (d.facebook_url) {
+        const el = document.getElementById('cms-facebook-link');
+        if (el) el.href = d.facebook_url;
+      }
+      if (d.banner_fysio_meta) {
+        const el = document.getElementById('cms-banner-fysio-meta');
+        if (el) el.textContent = d.banner_fysio_meta;
+      }
+      if (d.banner_lgt_meta) {
+        const el = document.getElementById('cms-banner-lgt-meta');
+        if (el) el.textContent = d.banner_lgt_meta;
       }
     } catch (e) {
       console.warn('[CMS] algemeen.json kon niet worden geladen, statische tekst blijft staan.', e);
@@ -511,7 +561,50 @@
       console.warn('[CMS] fysiotherapie.json kon niet worden geladen, statische tekst blijft staan.', e);
     }
 
-    // tarieven.json → tarieventabellen
+    // fysio_pillars.json → Fysiotherapie pijlers
+    try {
+      const res = await fetch('content/fysio_pillars.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (Array.isArray(d.pillars) && d.pillars.length) {
+        const container = document.getElementById('cms-pillars-container');
+        if (container) container.innerHTML = d.pillars.map(p =>
+          `<div class="pillar"><div class="pillar-title">${p.titel}</div><div class="pillar-text">${p.tekst}</div></div>`
+        ).join('');
+      }
+    } catch (e) {
+      console.warn('[CMS] fysio_pillars.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // therapie.json → Therapiekaarten
+    try {
+      const res = await fetch('content/therapie.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (Array.isArray(d.methoden) && d.methoden.length) {
+        const grid = document.getElementById('cms-therapie-grid');
+        if (grid) {
+          grid.innerHTML = d.methoden.map((m, i) => {
+            const nr = String(i + 1).padStart(2, '0');
+            return `<div class="therapie-card reveal" onclick="toggleCard(this)">
+              <div class="card-number">${nr}</div>
+              <div class="card-title">${m.titel}</div>
+              <div class="card-subtitle">${m.subtitel}</div>
+              <p class="card-text">${m.korte_tekst}</p>
+              <div class="card-detail">${m.lange_tekst}</div>
+              <button class="card-toggle">Meer lezen <svg viewBox="0 0 16 16" fill="none"><path d="M4 6 L8 10 L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+            </div>`;
+          }).join('');
+          // Re-register with the scroll observer: the async replace happened after
+          // the initial querySelectorAll('.reveal') ran, so new cards were never observed.
+          grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        }
+      }
+    } catch (e) {
+      console.warn('[CMS] therapie.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // tarieven.json → tarieventabellen, notes, vergoeding-block
     try {
       const res = await fetch('content/tarieven.json');
       if (!res.ok) throw new Error(res.status);
@@ -528,8 +621,47 @@
           `<tr><td>${r.omschrijving}</td><td>${r.prijs}</td></tr>`
         ).join('');
       }
+      if (d.fysio_note) {
+        const el = document.getElementById('cms-fysio-note');
+        if (el) el.textContent = d.fysio_note;
+      }
+      if (d.lgt_note) {
+        const el = document.getElementById('cms-lgt-note');
+        if (el) el.textContent = d.lgt_note;
+      }
+      if (d.vergoeding_fysio_titel) {
+        const el = document.getElementById('cms-verg-fysio-titel');
+        if (el) el.textContent = d.vergoeding_fysio_titel;
+      }
+      if (d.vergoeding_fysio_tekst) {
+        const el = document.getElementById('cms-verg-fysio-tekst');
+        if (el) el.textContent = d.vergoeding_fysio_tekst;
+      }
+      if (d.vergoeding_lgt_titel) {
+        const el = document.getElementById('cms-verg-lgt-titel');
+        if (el) el.textContent = d.vergoeding_lgt_titel;
+      }
+      if (d.vergoeding_lgt_tekst) {
+        const el = document.getElementById('cms-verg-lgt-tekst');
+        if (el) el.textContent = d.vergoeding_lgt_tekst;
+      }
     } catch (e) {
       console.warn('[CMS] tarieven.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // cv.json → Achtergrond & opleiding tijdlijn
+    try {
+      const res = await fetch('content/cv.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (Array.isArray(d.items) && d.items.length) {
+        const list = document.getElementById('cms-cv-list');
+        if (list) list.innerHTML = d.items.map(item =>
+          `<li class="cv-item"><span class="cv-jaar">${item.jaar}</span><span class="cv-desc">${item.beschrijving}</span></li>`
+        ).join('');
+      }
+    } catch (e) {
+      console.warn('[CMS] cv.json kon niet worden geladen, statische tekst blijft staan.', e);
     }
   }
 

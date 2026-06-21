@@ -24,6 +24,10 @@ collections:
           - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
           - { label: "E-mailadres", name: "email", widget: "string" }
           - { label: "Hero ondertitel", name: "hero_sub", widget: "text" }
+          - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
+          - { label: "Facebook URL", name: "facebook_url", widget: "string" }
+          - { label: "Banner fysiotherapie (metatekst)", name: "banner_fysio_meta", widget: "text" }
+          - { label: "Banner lichaamsgerichte therapie (metatekst)", name: "banner_lgt_meta", widget: "text" }
 
   - name: "over_mij"
     label: "Over mij"
@@ -62,9 +66,59 @@ collections:
             fields:
               - { label: "Omschrijving", name: "omschrijving", widget: "string" }
               - { label: "Prijs", name: "prijs", widget: "string" }
+          - { label: "Toelichting fysiotherapie (onder tabel)", name: "fysio_note", widget: "text" }
           - label: "Lichaamsgerichte therapie tarieven"
             name: "lgt"
             widget: "list"
             fields:
               - { label: "Omschrijving", name: "omschrijving", widget: "string" }
               - { label: "Prijs", name: "prijs", widget: "string" }
+          - { label: "Toelichting LGT (onder tabel)", name: "lgt_note", widget: "text" }
+          - { label: "Vergoeding fysio – titel", name: "vergoeding_fysio_titel", widget: "string" }
+          - { label: "Vergoeding fysio – tekst", name: "vergoeding_fysio_tekst", widget: "text" }
+          - { label: "Vergoeding LGT – titel", name: "vergoeding_lgt_titel", widget: "string" }
+          - { label: "Vergoeding LGT – tekst", name: "vergoeding_lgt_tekst", widget: "text" }
+
+  - name: "cv"
+    label: "Achtergrond & opleiding"
+    files:
+      - name: "cv"
+        label: "CV & tijdlijn"
+        file: "content/cv.json"
+        fields:
+          - label: "Tijdlijn items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Jaar", name: "jaar", widget: "string" }
+              - { label: "Beschrijving", name: "beschrijving", widget: "text" }
+
+  - name: "therapie"
+    label: "Therapievormen"
+    files:
+      - name: "therapie"
+        label: "Therapiekaarten"
+        file: "content/therapie.json"
+        fields:
+          - label: "Methoden"
+            name: "methoden"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "string" }
+              - { label: "Korte tekst", name: "korte_tekst", widget: "text" }
+              - { label: "Lange tekst (uitklap)", name: "lange_tekst", widget: "text" }
+
+  - name: "fysio_pillars"
+    label: "Fysiotherapie pijlers"
+    files:
+      - name: "fysio_pillars"
+        label: "Fysiotherapie pijlers"
+        file: "content/fysio_pillars.json"
+        fields:
+          - label: "Pijlers"
+            name: "pillars"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }

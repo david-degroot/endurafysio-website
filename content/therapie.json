@@ -1,0 +1,34 @@
+{
+  "methoden": [
+    {
+      "titel": "Oefenmethode Brouw",
+      "subtitel": "Beweging & zelfregulatie",
+      "korte_tekst": "Een actieve lichaamsgerichte methode gericht op het herstellen van natuurlijke bewegingspatronen.",
+      "lange_tekst": "De Oefenmethode Brouw richt zich op het bewust ervaren en bijsturen van houding en beweging. Door gerichte aandacht voor de adem, grondverbinding en spieractivatie leer je je lichaam anders te bewonen. Geschikt bij chronische pijn, hyperventilatie en stressgerelateerde klachten."
+    },
+    {
+      "titel": "FOI",
+      "subtitel": "Functionele Orthopedie & Integratie",
+      "korte_tekst": "Een manuele therapievorm die structurele en functionele disbalansen integreert via zachte, gerichte technieken.",
+      "lange_tekst": "FOI combineert orthopedische inzichten met osteopathische principes en is effectief bij gewrichtsklachten, spierchains en postuurproblemen. De methode kijkt altijd naar het geheel, niet alleen naar de pijnplek."
+    },
+    {
+      "titel": "Body Stress Release",
+      "subtitel": "Loslaten van vastgezette spanning",
+      "korte_tekst": "Een zachte methode die vastgezette stress in het zenuwstelsel opspoort en helpt te ontladen.",
+      "lange_tekst": "Via lichte druk op specifieke punten langs de wervelkolom stimuleert de methode het lichaam zelf om opgeslagen spanning los te laten. Klanten ervaren meer rust, soepelheid en een dieper gevoel van ontlading."
+    },
+    {
+      "titel": "Antroposofische fysiotherapie",
+      "subtitel": "Mens als heel wezen",
+      "korte_tekst": "Een verdieping van de reguliere fysiotherapie vanuit de antroposofische visie op de mens.",
+      "lange_tekst": "Gebaseerd op het werk van Rudolf Steiner. Bewegingsoefeningen, euritmie-elementen en bewuste ademhaling bevorderen herstel op meerdere lagen. Bijzonder geschikt voor mensen die meer willen dan puur mechanisch herstel."
+    },
+    {
+      "titel": "SSP – Safe & Sound Protocol",
+      "subtitel": "Zenuwstelsel via geluid kalibreren",
+      "korte_tekst": "Het Safe and Sound Protocol van Stephen Porges gebruikt gespecialiseerde muziek om het zenuwstelsel te reguleren.",
+      "lange_tekst": "Gebaseerd op de Polyvagaal Theorie. Via koptelefoon luister je naar gefilterde klankfrequenties die de n. vagus stimuleren. Effectief bij trauma, overprikkeling, angst en moeite met sociale situaties."
+    }
+  ]
+}
