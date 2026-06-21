@@ -3,6 +3,8 @@ backend:
   repo: david-degroot/endurafysio-website
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "images"
 public_folder: "/images"
 

@@ -247,7 +247,7 @@
     <h2 class="section-title">Wie staat er<br><em>voor je klaar?</em></h2>
     <blockquote class="over-quote" id="cms-citaat">"Laat niemand je overhalen zijn lichaam te genezen, als hij niet eerst gevraagd heeft zijn ziel te genezen." — Plato</blockquote>
     <p id="cms-over-alinea1">Ik ben fysiotherapeut en lichaamsgerichte therapeut met een passie voor integraal werken. Na jaren in de reguliere fysiotherapie groeide mijn interesse in therapievormen die verder gaan dan het symptoom — en die de wijsheid van het lichaam als vertrekpunt nemen.</p>
-    <p id="cms-over-alinea2">In mijn praktijk in Arnhem en Nijmegen begeleid ik mensen met vaak chronische klachten, spanning en pijn naar meer vitaliteit en veerkracht. Ik maak gebruik van verschillende behandelmethoden maar werk altijd individugericht en houd rekening met jouw persoonlijke omstandigheden en biografie.</p>
+    <p id="cms-over-alinea2">In mijn praktijk in Arnhem en Nijmegen begeleid ik mensen met (chronische) klachten, spanning en pijn naar meer vitaliteit en veerkracht. Ik maak gebruik van verschillende behandelmethoden maar werk altijd individugericht en houd rekening met jouw persoonlijke omstandigheden en biografie.</p>
     <p id="cms-over-alinea3">Ik ben geen traumatherapeut maar heb mij op verschillende manieren geschoold om traumasensitief te werken.</p>
     <a href="#contact" class="btn-primary" style="margin-top:1rem;">Maak kennis</a>
   </div>
@@ -452,6 +452,88 @@
     document.getElementById('form-success').style.display = 'block';
     e.target.reset();
   }
+
+  // ── CMS content loader ──
+  // Each fetch is independent: a single failure leaves all other sections intact.
+  async function loadCMS() {
+
+    // algemeen.json → hero, contact, footer
+    try {
+      const res = await fetch('content/algemeen.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (d.stad) document.getElementById('cms-stad').textContent = 'Solopraktijk · ' + d.stad;
+      if (d.hero_sub) document.getElementById('cms-hero-sub').textContent = d.hero_sub;
+      if (d.tagline) document.getElementById('cms-tagline').textContent = d.tagline;
+      if (d.email) {
+        const el = document.getElementById('cms-email');
+        if (el) { el.textContent = d.email; el.href = 'mailto:' + d.email; }
+      }
+      if (d.telefoon) {
+        const el = document.getElementById('cms-telefoon');
+        if (el) { el.textContent = d.telefoon; el.href = 'tel:' + d.telefoon.replace(/\s/g, ''); }
+      }
+      if (d.adres) {
+        const el = document.getElementById('cms-adres');
+        if (el) el.textContent = d.adres;
+      }
+      if (d.praktijknaam) {
+        const el = document.getElementById('cms-footer-naam');
+        if (el) el.textContent = d.praktijknaam;
+      }
+    } catch (e) {
+      console.warn('[CMS] algemeen.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // over_mij.json → Over mij sectie
+    try {
+      const res = await fetch('content/over_mij.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (d.citaat) document.getElementById('cms-citaat').textContent = d.citaat;
+      if (d.alinea1) document.getElementById('cms-over-alinea1').textContent = d.alinea1;
+      if (d.alinea2) document.getElementById('cms-over-alinea2').textContent = d.alinea2;
+      if (d.alinea3) document.getElementById('cms-over-alinea3').textContent = d.alinea3;
+    } catch (e) {
+      console.warn('[CMS] over_mij.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // fysiotherapie.json → Fysiotherapie sectie
+    try {
+      const res = await fetch('content/fysiotherapie.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (d.intro)   document.getElementById('cms-fysio-intro').textContent   = d.intro;
+      if (d.alinea1) document.getElementById('cms-fysio-alinea1').textContent = d.alinea1;
+      if (d.alinea2) document.getElementById('cms-fysio-alinea2').textContent = d.alinea2;
+      if (d.alinea3) document.getElementById('cms-fysio-alinea3').textContent = d.alinea3;
+    } catch (e) {
+      console.warn('[CMS] fysiotherapie.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // tarieven.json → tarieventabellen
+    try {
+      const res = await fetch('content/tarieven.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (Array.isArray(d.fysio)) {
+        const tbl = document.getElementById('cms-tarieven-fysio');
+        if (tbl) tbl.innerHTML = d.fysio.map(r =>
+          `<tr><td>${r.omschrijving}</td><td>${r.prijs}</td></tr>`
+        ).join('');
+      }
+      if (Array.isArray(d.lgt)) {
+        const tbl = document.getElementById('cms-tarieven-lgt');
+        if (tbl) tbl.innerHTML = d.lgt.map(r =>
+          `<tr><td>${r.omschrijving}</td><td>${r.prijs}</td></tr>`
+        ).join('');
+      }
+    } catch (e) {
+      console.warn('[CMS] tarieven.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+  }
+
+  loadCMS();
 
 </script>
 </body>
