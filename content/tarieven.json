@@ -20,15 +20,15 @@
     },
     {
       "omschrijving": "Sessie (60 min)",
-      "prijs": "€ 85"
+      "prijs": "€ 70"
     },
     {
       "omschrijving": "Sessie (75 min)",
-      "prijs": "€ 100"
+      "prijs": "€ 95"
     },
     {
       "omschrijving": "SSP – volledig traject (5 sessies)",
-      "prijs": "€ 375"
+      "prijs": "€ 500"
     },
     {
       "omschrijving": "Integraal traject (op maat)",
@@ -38,7 +38,7 @@
   "fysio_note": "Zonder contract met zorgverzekeraars. Nota indienen bij aanvullende verzekering — vergoeding 60-100% afhankelijk van polis. BIG: 49033723204 · AGB-zorgverlener: 04-105104 · AGB-praktijk: 04-059750",
   "lgt_note": "Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket. Geregistreerd bij VBAG, RBCZ en NVAZ · AGB: 90-102929 · Praktijk: 90-062320",
   "vergoeding_fysio_titel": "Fysiotherapie & verzekering",
-  "vergoeding_fysio_tekst": "Vergoed vanuit de aanvullende verzekering. De hoogte is afhankelijk van jouw polis. Ik ben geregistreerd bij:",
+  "vergoeding_fysio_tekst": "Vergoed vanuit de aanvullende verzekering. De hoogte is afhankelijk van jouw polis. ",
   "vergoeding_lgt_titel": "Lichaamsgerichte therapie & verzekering",
-  "vergoeding_lgt_tekst": "Valt buiten de reguliere zorgverzekering. Veel aanvullende pakketten bieden wel vergoeding voor complementaire zorg."
+  "vergoeding_lgt_tekst": "Vergoeding via de aanvullende verzekering voor alternatieve en of antroposofische zorg."
 }
