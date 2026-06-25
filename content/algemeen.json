@@ -1,14 +1,14 @@
 {
   "praktijknaam": "EnduraFysio",
-  "tagline": "Bewegen vanuit verbinding",
   "stad": "Arnhem",
-  "adres": "Onder de Linde 21-9",
-  "postcode": "6800 AB Arnhem",
-  "telefoon": "06 00 000 000",
-  "email": "info@endurafysio.nl",
-  "hero_sub": "Twee disciplines, één therapeut. Lichaamsgerichte therapie en fysiotherapie — elk met een eigen aanpak en vergoedingsstructuur.",
-  "linkedin_url": "",
-  "facebook_url": "",
+  "postcode": "6822 KG Arnhem",
+  "tagline": "Bewegen vanuit verbondenheid en verbinding",
+  "linkedin_url": "www.linkedin.com/in/louis-de-groot-69937983 ",
   "banner_fysio_meta": "Vergoed via zorgverzekeraar. BIG-geregistreerd, gedeclareerd met AGB-code. Vergoeding afhankelijk van jouw aanvullende pakket.",
+  "telefoon": "06 00 000 000",
+  "facebook_url": "https://www.facebook.com/louis.degroot.395/ ",
+  "hero_sub": "Twee disciplines, één therapeut. Lichaamsgerichte therapie en fysiotherapie — elk met een eigen aanpak en vergoedingsstructuur.",
+  "email": "info@endurafysio.nl",
+  "adres": "Onder de Linden 21-9",
   "banner_lgt_meta": "Niet vergoed via basisverzekering. Wordt apart gefactureerd als complementaire zorg. Mogelijk (deels) vergoed via aanvullend pakket."
 }
