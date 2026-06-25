@@ -1,15 +1,39 @@
 {
   "fysio": [
-    { "omschrijving": "Intake & onderzoek (60 min)", "prijs": "€ 75" },
-    { "omschrijving": "Behandeling (45 min)", "prijs": "€ 58" },
-    { "omschrijving": "Korte behandeling (30 min)", "prijs": "€ 42" }
+    {
+      "omschrijving": "Intake & onderzoek (60 min)",
+      "prijs": "€ 54"
+    },
+    {
+      "omschrijving": "Behandeling (45 min)",
+      "prijs": "€ 44"
+    },
+    {
+      "omschrijving": "Korte behandeling (30 min)",
+      "prijs": "€ 30"
+    }
   ],
   "lgt": [
-    { "omschrijving": "Kennismakingsgesprek (30 min)", "prijs": "Gratis" },
-    { "omschrijving": "Sessie (60 min)", "prijs": "€ 85" },
-    { "omschrijving": "Sessie (75 min)", "prijs": "€ 100" },
-    { "omschrijving": "SSP – volledig traject (5 sessies)", "prijs": "€ 375" },
-    { "omschrijving": "Integraal traject (op maat)", "prijs": "Op aanvraag" }
+    {
+      "omschrijving": "Kennismakingsgesprek (30 min)",
+      "prijs": "Gratis"
+    },
+    {
+      "omschrijving": "Sessie (60 min)",
+      "prijs": "€ 85"
+    },
+    {
+      "omschrijving": "Sessie (75 min)",
+      "prijs": "€ 100"
+    },
+    {
+      "omschrijving": "SSP – volledig traject (5 sessies)",
+      "prijs": "€ 375"
+    },
+    {
+      "omschrijving": "Integraal traject (op maat)",
+      "prijs": "Op aanvraag"
+    }
   ],
   "fysio_note": "Zonder contract met zorgverzekeraars. Nota indienen bij aanvullende verzekering — vergoeding 60-100% afhankelijk van polis. BIG: 49033723204 · AGB-zorgverlener: 04-105104 · AGB-praktijk: 04-059750",
   "lgt_note": "Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket. Geregistreerd bij VBAG, RBCZ en NVAZ · AGB: 90-102929 · Praktijk: 90-062320",
