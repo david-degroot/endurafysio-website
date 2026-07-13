@@ -1,7 +1,20 @@
 {
   "items": [
-    { "jaar": "20XX", "beschrijving": "Opleiding Fysiotherapie, [instelling]" },
-    { "jaar": "20XX", "beschrijving": "Certificering Methode Brouw" },
-    { "jaar": "20XX", "beschrijving": "Start eigen praktijk Endura" }
+    {
+      "jaar": "1990",
+      "beschrijving": "Opleiding Fysiotherapie, Arnhem/Nijmegen (HAN)"
+    },
+    {
+      "jaar": "1999",
+      "beschrijving": "Geschiedenis van de Moderne Filosofie, RU Nijmegen, MA"
+    },
+    {
+      "jaar": "2003",
+      "beschrijving": "Opleiding antroposofische Fysiotherapie, Zeist"
+    },
+    {
+      "jaar": "2013",
+      "beschrijving": "Development of Psychomotor System, method N.A.B. Brouw , Den Haag"
+    }
   ]
 }
