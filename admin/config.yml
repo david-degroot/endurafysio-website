@@ -17,6 +17,7 @@ collections:
         file: "content/algemeen.json"
         fields:
           - { label: "Praktijknaam", name: "praktijknaam", widget: "string" }
+          - { label: "Hero titel (H1 + browsertab)", name: "hero_titel", widget: "string" }
           - { label: "Tagline (onder de naam)", name: "tagline", widget: "string" }
           - { label: "Stad", name: "stad", widget: "string" }
           - { label: "Adres", name: "adres", widget: "string" }
@@ -24,10 +25,24 @@ collections:
           - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
           - { label: "E-mailadres", name: "email", widget: "string" }
           - { label: "Hero ondertitel", name: "hero_sub", widget: "text" }
+          - { label: "Hero kop (patiëntgericht)", name: "hero_kop", widget: "string", hint: "Gebruikt in de hero van index-blauw.html. De velden 'Hero titel' en 'Hero ondertitel' hierboven worden gebruikt in index-warm.html." }
+          - { label: "Hero subkop (patiëntgericht)", name: "hero_subkop", widget: "text" }
+          - { label: "Hero knoptekst", name: "hero_knop_tekst", widget: "string" }
+          - { label: "Hero knop link", name: "hero_knop_link", widget: "string", hint: "Paginaanker (bv. #contact) of volledige URL" }
           - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
           - { label: "Facebook URL", name: "facebook_url", widget: "string" }
           - { label: "Banner fysiotherapie (metatekst)", name: "banner_fysio_meta", widget: "text" }
           - { label: "Banner lichaamsgerichte therapie (metatekst)", name: "banner_lgt_meta", widget: "text" }
+          - { label: "Google reviews URL", name: "google_reviews_url", widget: "string", hint: "TODO: vervang door de echte Google Reviews-URL van de praktijk zodra bekend." }
+          - { label: "Directe Toegang Fysiotherapie (DTF) uitleg", name: "dtf_tekst", widget: "text", hint: "Infoblok onder de hero op index-blauw.html." }
+          - { label: "Vergoeding uitleg (tarieven-sectie)", name: "vergoeding_uitleg", widget: "text", hint: "Uitleg in begrijpelijke taal over declaratie, aanvullende verzekering en eigen risico." }
+          - { label: "WhatsApp nummer", name: "whatsapp", widget: "string", hint: "Alleen het nummer invullen, bv. 06 49 87 84 10 — de wa.me-link wordt automatisch opgebouwd." }
+          - label: "Openingstijden"
+            name: "openingstijden"
+            widget: "list"
+            fields:
+              - { label: "Dag", name: "dag", widget: "string" }
+              - { label: "Tijd", name: "tijd", widget: "string" }
 
   - name: "over_mij"
     label: "Over mij"
@@ -37,6 +52,10 @@ collections:
         file: "content/over_mij.json"
         fields:
           - { label: "Citaat", name: "citaat", widget: "string" }
+          - { label: "Citaatblok (over mij) – tekst", name: "citaat_tekst", widget: "text" }
+          - { label: "Citaatblok (over mij) – bron", name: "citaat_bron", widget: "string" }
+          - { label: "Portretfoto", name: "portretfoto", widget: "image", required: false, hint: "Ronde avatar (~140px) op index-blauw.html. Zolang hier niets is geüpload, blijft de neutrale placeholder-icoon zichtbaar." }
+          - { label: "Portretfoto alt-tekst", name: "portretfoto_alt", widget: "string", required: false }
           - { label: "Alinea 1", name: "alinea1", widget: "text" }
           - { label: "Alinea 2", name: "alinea2", widget: "text" }
           - { label: "Alinea 3", name: "alinea3", widget: "text" }
@@ -122,3 +141,18 @@ collections:
             fields:
               - { label: "Titel", name: "titel", widget: "string" }
               - { label: "Tekst", name: "tekst", widget: "text" }
+
+  - name: "reviews"
+    label: "Reviews"
+    files:
+      - name: "reviews"
+        label: "Cliënt-reviews"
+        file: "content/reviews.json"
+        fields:
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "naam", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Beoordeling (1-5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }

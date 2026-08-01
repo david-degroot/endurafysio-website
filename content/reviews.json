@@ -1,0 +1,19 @@
+{
+  "reviews": [
+    {
+      "naam": "M. Jansen",
+      "quote": "Na jaren rugklachten eindelijk iemand die verder keek dan alleen het symptoom. Louis nam echt de tijd.",
+      "rating": 5
+    },
+    {
+      "naam": "S. de Vries",
+      "quote": "Prettige combinatie van deskundigheid en persoonlijke aandacht. Voelde me vanaf het eerste gesprek serieus genomen.",
+      "rating": 5
+    },
+    {
+      "naam": "R. Bakker",
+      "quote": "Goede uitleg, duidelijke oefeningen en merkbaar resultaat na een paar sessies.",
+      "rating": 4
+    }
+  ]
+}
