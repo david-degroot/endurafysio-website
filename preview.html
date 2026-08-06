@@ -75,7 +75,7 @@
 
     /* HERO */
     #hero {
-      min-height: 100vh;
+      min-height: 80vh;
       padding-top: var(--nav-height);
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -83,7 +83,7 @@
       background: var(--white);
     }
 
-    .hero-text { padding: 8vh 5vw 8vh 8vw; }
+    .hero-text { padding: 3vh 5vw 6vh 8vw; }
 
     .hero-eyebrow {
       font-size: 0.78rem;
@@ -97,7 +97,7 @@
 
     .hero-title {
       font-family: 'Merriweather', serif;
-      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-size: clamp(1.9rem, 2.8vw, 2.6rem);
       font-weight: 300;
       line-height: 1.25;
       color: var(--blue-dark);
@@ -115,7 +115,7 @@
 
     .hero-visual {
       background: var(--blue-light);
-      height: 100vh;
+      height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -131,27 +131,27 @@
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 4px;
-      padding: 1.25rem 1.5rem;
-      max-width: 320px;
+      padding: 1.5rem 1.8rem;
+      max-width: 384px;
       text-align: left;
     }
     .hero-spec-box h4 {
-      font-size: 0.75rem;
+      font-size: 0.9rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--blue);
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.9rem;
     }
     .hero-spec-box ul { list-style: none; }
     .hero-spec-box li {
-      font-size: 0.88rem;
+      font-size: 1.06rem;
       color: var(--text-muted);
-      padding: 0.3rem 0;
+      padding: 0.36rem 0;
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
     .hero-spec-box li:last-child { border-bottom: none; }
     .hero-spec-box li::before {
@@ -199,6 +199,7 @@
       justify-content: center;
       min-height: 44px;
       box-sizing: border-box;
+      background: var(--white);
       border: 2px solid var(--blue);
       color: var(--blue);
       text-decoration: none;
@@ -210,6 +211,20 @@
       transition: all 0.2s;
     }
     .btn-secondary:hover { background: var(--blue); color: var(--white); }
+
+    .btn-tertiary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--blue-dark);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding: 0.2rem 0;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-tertiary:hover { color: var(--blue); border-color: var(--blue); }
 
     /* SECTIONS */
     section { padding: 5rem 8vw; }
@@ -467,7 +482,7 @@
 <section id="hero">
   <div class="hero-text reveal">
     <span class="hero-eyebrow" id="cms-stad">Solopraktijk · Arnhem &amp; Nijmegen</span>
-    <h1 class="hero-title" id="cms-hero-kop">Fysiotherapie en Lichaamsgerichte Natuurgeneeskunde</h1>
+    <h1 class="hero-title" id="cms-hero-kop">Fysiotherapie en lichaamsgerichte therapie</h1>
     <p class="hero-sub" id="cms-hero-subkop">Twee disciplines, één therapeut. Directe toegang, zonder verwijzing.</p>
     <a href="#contact" class="btn-primary" id="cms-hero-knop-tekst">Plan een afspraak</a>
   </div>
@@ -539,7 +554,7 @@
       <p id="cms-fysio-alinea1">Mijn aanpak valt binnen de afgesproken standaarden van de reguliere fysiotherapie, maar is gekleurd door mijn eigen scholingsweg. Ik werk met manuele technieken, oefentherapie en massage — maar altijd vanuit een diepere luisterhouding.</p>
       <p id="cms-fysio-alinea2">Ik geloof dat duurzaam herstel vraagt om aandacht voor de bredere context: leefstijl, stress, ademhaling en bewustzijn.</p>
       <p id="cms-fysio-alinea3">Ik werk zonder contract met zorgverzekeraars — dat betekent niet dat u geen recht op vergoeding hebt. Met een aanvullende verzekering kunt u de nota indienen en krijgt u een deel vergoed.</p>
-      <a href="#contact" class="btn-secondary" style="margin-top:1.25rem;">Kennismakingsgesprek aanvragen</a>
+      <a href="#contact" class="btn-secondary" style="margin-top:1.25rem; margin-left:0;">Kennismakingsgesprek aanvragen</a>
     </div>
     <div class="fysio-pillars reveal" id="cms-pillars-container">
       <div class="pillar"><div class="pillar-title">Erkende zorgvorm</div><div class="pillar-text">BIG-geregistreerd en te declareren bij de zorgverzekeraar met AGB-code. Gescheiden van de lichaamsgerichte therapie.</div></div>
@@ -637,7 +652,7 @@
     </div>
   </div>
   <!-- TODO: vervang google_reviews_url in content/algemeen.json met de echte Google Reviews-URL van de praktijk -->
-  <a href="#" id="cms-google-reviews-link" class="btn-secondary reveal" style="display:inline-block;" target="_blank" rel="noopener noreferrer">Bekijk onze Google-reviews</a>
+  <a href="#" id="cms-google-reviews-link" class="btn-tertiary reveal" style="display:inline-flex;" target="_blank" rel="noopener noreferrer">Bekijk onze Google-reviews →</a>
 </section>
 
 <!-- TARIEVEN -->
@@ -677,7 +692,7 @@
     <div class="vergoeding-item">
       <h4><span class="vergoeding-dot vd-lgt"></span><span id="cms-verg-lgt-titel">Lichaamsgerichte therapie &amp; verzekering</span></h4>
       <p id="cms-verg-lgt-tekst">Valt buiten de reguliere zorgverzekering. Veel aanvullende pakketten bieden vergoeding voor complementaire zorg. Geregistreerd bij VBAG, RBCZ en NVAZ.</p>
-      <a href="#contact" class="btn-primary" style="margin-top:1rem; display:inline-block; font-size:0.8rem;">Vraag stellen</a>
+      <a href="#contact" class="btn-secondary" style="margin-top:1rem; margin-left:0; display:inline-block; font-size:0.8rem;">Vraag stellen</a>
     </div>
   </div>
 </section>
