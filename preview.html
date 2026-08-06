@@ -161,18 +161,19 @@
       font-size: 1rem;
     }
 
-    /* DTF INFO */
-    .dtf-info {
+    /* INFO BAR (DTF / vergoeding LGT) */
+    .info-bar {
       background: var(--blue-light);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 1rem 8vw;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.85rem;
     }
-    .dtf-info svg { width: 20px; height: 20px; color: var(--blue); flex-shrink: 0; }
-    .dtf-info p { font-size: 0.88rem; color: var(--text); line-height: 1.6; max-width: 70ch; }
+    .info-bar svg { width: 20px; height: 20px; color: var(--blue); flex-shrink: 0; }
+    .info-bar p { font-size: 0.88rem; color: var(--text); line-height: 1.6; max-width: 100ch; text-align: center; }
 
     /* BUTTONS */
     .btn-primary {
@@ -231,11 +232,11 @@
     }
 
     /* OVER MIJ */
-    #over-mij { background: var(--white); display: grid; grid-template-columns: 160px 1fr; gap: 4rem; align-items: start; }
+    #over-mij { background: var(--white); display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: start; }
 
     .over-photo {
-      width: 140px;
-      height: 140px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
       overflow: hidden;
       background: var(--blue-light);
@@ -250,7 +251,7 @@
     .over-photo-placeholder {
       display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;
     }
-    .over-photo-placeholder svg { width: 48px; height: 48px; opacity: 0.3; }
+    .over-photo-placeholder svg { width: 96px; height: 96px; opacity: 0.3; }
 
     .over-text { max-width: 70ch; }
 
@@ -353,8 +354,6 @@
 
     /* TARIEVEN */
     #tarieven { background: var(--bg); }
-    .vergoeding-uitleg-box { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 4px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; max-width: 70ch; }
-    .vergoeding-uitleg-box p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; }
     .tarieven-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
     .tarief-blok { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; }
     .tarief-blok-fysio { border-top: 3px solid var(--blue); }
@@ -445,7 +444,7 @@
       .nav-links.open .nav-cta { min-height: 44px; box-sizing: border-box; justify-content: center; }
       .form-row { grid-template-columns: 1fr; }
       .therapie-grid, .reviews-grid { grid-template-columns: 1fr; }
-      .dtf-info { padding: 1rem 6vw; }
+      .info-bar { padding: 1rem 6vw; }
     }
   </style>
 </head>
@@ -492,7 +491,7 @@
 <!-- OVER MIJ -->
 <section id="over-mij">
   <div class="over-photo">
-    <img class="over-photo-img" id="cms-portretfoto" alt="" width="140" height="140" loading="lazy" />
+    <img class="over-photo-img" id="cms-portretfoto" alt="" width="280" height="280" loading="lazy" />
     <div class="over-photo-placeholder" id="cms-portretfoto-placeholder">
       <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="20" r="12" stroke="#5A94C2" stroke-width="1.5"/><path d="M8 56 C8 42 56 42 56 56" stroke="#5A94C2" stroke-width="1.5"/></svg>
     </div>
@@ -525,7 +524,7 @@
 <div class="discipline-banner discipline-banner-fysio">
   <span class="disc-badge">Discipline 1 van 2</span>
   <span class="disc-heading">Fysiotherapie</span>
-  <span class="disc-meta" id="cms-banner-fysio-meta"><strong>Vergoed via zorgverzekeraar</strong>BIG-geregistreerd · AGB-code · Zonder contract met verzekeraars</span>
+  <span class="disc-meta" id="cms-banner-fysio-meta">Vergoeding via de zorgverzekeraar als ongecontracteerde zorg.<br>Vergoeding afhankelijk van jouw aanvullende pakket.</span>
 </div>
 
 <!-- FYSIOTHERAPIE -->
@@ -552,7 +551,7 @@
 </section>
 
 <!-- DTF INFO -->
-<div class="dtf-info reveal">
+<div class="info-bar reveal">
   <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M8 7.2 V11.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="8" cy="5.1" r="0.9" fill="currentColor"/></svg>
   <p id="cms-dtf-tekst">Voor fysiotherapie heeft u geen verwijzing van de huisarts nodig. Via Directe Toegang Fysiotherapie (DTF) beoordeel ik eerst of uw klacht geschikt is voor fysiotherapeutische behandeling, en verwijs ik u anders door naar de huisarts.</p>
 </div>
@@ -646,9 +645,6 @@
   <div class="section-header reveal">
     <h2>Tarieven &amp; vergoeding</h2>
     <p>Twee disciplines, twee tarievenstructuren — transparant en apart gefactureerd.</p>
-  </div>
-  <div class="vergoeding-uitleg-box reveal">
-    <p id="cms-vergoeding-uitleg">Fysiotherapie wordt vergoed vanuit uw aanvullende verzekering, niet vanuit de basisverzekering (behalve bij kinderen tot 18 jaar en een aantal chronische aandoeningen). Ik werk zonder contract met zorgverzekeraars: u ontvangt van mij een factuur die u zelf indient bij uw verzekeraar. Voor fysiotherapie vanuit de aanvullende verzekering geldt geen eigen risico — dat eigen risico geldt alleen voor zorg vanuit de basisverzekering.</p>
   </div>
   <div class="tarieven-columns reveal">
     <div class="tarief-blok tarief-blok-fysio">
@@ -847,7 +843,7 @@
       }
       if (d.banner_fysio_meta) {
         const el = document.getElementById('cms-banner-fysio-meta');
-        if (el) el.textContent = d.banner_fysio_meta;
+        if (el) el.innerHTML = d.banner_fysio_meta;
       }
       if (d.banner_lgt_meta) {
         const el = document.getElementById('cms-banner-lgt-meta');
@@ -860,10 +856,6 @@
       if (d.dtf_tekst) {
         const el = document.getElementById('cms-dtf-tekst');
         if (el) el.textContent = d.dtf_tekst;
-      }
-      if (d.vergoeding_uitleg) {
-        const el = document.getElementById('cms-vergoeding-uitleg');
-        if (el) el.textContent = d.vergoeding_uitleg;
       }
       if (d.whatsapp) {
         const el = document.getElementById('cms-whatsapp-link');
