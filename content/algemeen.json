@@ -1,31 +1,49 @@
 {
-  "praktijknaam": "EnduraFysio",
   "hero_titel": "Praktijk voor Fysiotherapie en Manuele Natuurgeneeskunde",
+  "praktijknaam": "Endura Praktijk voor Fysiotherapie en Lichaamsgerichte Therapie",
   "stad": "Arnhem",
+  "google_reviews_url": "#",
+  "hero_knop_tekst": "Plan een afspraak",
+  "hero_kop": "Fysiotherapie en lichaamsgerichte therapie",
   "postcode": "6822 KG Arnhem",
   "tagline": "Bewegen in verbondenheid",
   "linkedin_url": "www.linkedin.com/in/louis-de-groot-69937983 ",
+  "hero_knop_link": "#contact",
+  "hero_subkop": "Twee disciplines, één therapeut. Directe toegang, zonder verwijzing.",
   "banner_fysio_meta": "Vergoeding via de zorgverzekeraar als ongecontracteerde zorg.<br>Vergoeding afhankelijk van jouw aanvullende pakket.",
+  "dtf_tekst": "Voor fysiotherapie heeft u geen verwijzing van de huisarts nodig. Via Directe Toegang Fysiotherapie (DTF) beoordeel ik eerst of uw klacht geschikt is voor fysiotherapeutische behandeling, en verwijs ik u anders door naar de huisarts.",
+  "whatsapp": "06 49 87 84 10",
   "telefoon": "06 49 87 84 10 ",
+  "openingstijden": [
+    {
+      "dag": "Maandag",
+      "tijd": "08:00 – 17:00"
+    },
+    {
+      "dag": "Dinsdag",
+      "tijd": "08:00 – 17:00"
+    },
+    {
+      "dag": "Woensdag",
+      "tijd": "08:00 – 12:00"
+    },
+    {
+      "dag": "Donderdag",
+      "tijd": "08:00 – 17:00"
+    },
+    {
+      "dag": "Vrijdag",
+      "tijd": "08:00 – 15:00"
+    },
+    {
+      "dag": "Zaterdag / Zondag",
+      "tijd": "Gesloten"
+    }
+  ],
+  "vergoeding_uitleg": "Fysiotherapie wordt vergoed vanuit uw aanvullende verzekering, niet vanuit de basisverzekering (behalve bij kinderen tot 18 jaar en een aantal chronische aandoeningen). Ik werk zonder contract met zorgverzekeraars: u ontvangt van mij een factuur die u zelf indient bij uw verzekeraar. Voor fysiotherapie vanuit de aanvullende verzekering geldt geen eigen risico — dat eigen risico geldt alleen voor zorg vanuit de basisverzekering.",
   "facebook_url": "https://www.facebook.com/louis.degroot.395/ ",
   "hero_sub": "Twee disciplines, één therapeut. \n\nFysiotherapie & Lichaamsgerichte therapie BodyMind  ",
-  "hero_kop": "Fysiotherapie en lichaamsgerichte therapie",
-  "hero_subkop": "Twee disciplines, één therapeut. Directe toegang, zonder verwijzing.",
-  "hero_knop_tekst": "Plan een afspraak",
-  "hero_knop_link": "#contact",
   "email": "info@endurafysio.nl",
   "adres": "Onder de Linden 21-9",
-  "banner_lgt_meta": "Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket.",
-  "google_reviews_url": "#",
-  "dtf_tekst": "Voor fysiotherapie heeft u geen verwijzing van de huisarts nodig. Via Directe Toegang Fysiotherapie (DTF) beoordeel ik eerst of uw klacht geschikt is voor fysiotherapeutische behandeling, en verwijs ik u anders door naar de huisarts.",
-  "vergoeding_uitleg": "Fysiotherapie wordt vergoed vanuit uw aanvullende verzekering, niet vanuit de basisverzekering (behalve bij kinderen tot 18 jaar en een aantal chronische aandoeningen). Ik werk zonder contract met zorgverzekeraars: u ontvangt van mij een factuur die u zelf indient bij uw verzekeraar. Voor fysiotherapie vanuit de aanvullende verzekering geldt geen eigen risico — dat eigen risico geldt alleen voor zorg vanuit de basisverzekering.",
-  "whatsapp": "06 49 87 84 10",
-  "openingstijden": [
-    { "dag": "Maandag", "tijd": "08:00 – 17:00" },
-    { "dag": "Dinsdag", "tijd": "08:00 – 17:00" },
-    { "dag": "Woensdag", "tijd": "08:00 – 12:00" },
-    { "dag": "Donderdag", "tijd": "08:00 – 17:00" },
-    { "dag": "Vrijdag", "tijd": "08:00 – 15:00" },
-    { "dag": "Zaterdag / Zondag", "tijd": "Gesloten" }
-  ]
+  "banner_lgt_meta": "Niet vergoed via basisverzekering. Mogelijk deels vergoed via aanvullend pakket."
 }
