@@ -26,7 +26,7 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.85; }
 
     /* NAV */
     nav {
@@ -50,7 +50,7 @@
 
     .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
     .nav-links a {
-      font-size: 0.82rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--text-muted);
       text-decoration: none;
@@ -106,11 +106,11 @@
     .hero-title em { font-style: italic; color: var(--blue); }
 
     .hero-sub {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
       max-width: 460px;
       margin-bottom: 2rem;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     .hero-visual {
@@ -173,7 +173,7 @@
       gap: 0.85rem;
     }
     .info-bar svg { width: 20px; height: 20px; color: var(--blue); flex-shrink: 0; }
-    .info-bar p { font-size: 0.88rem; color: var(--text); line-height: 1.6; max-width: 100ch; text-align: center; }
+    .info-bar p { font-size: 0.95rem; color: var(--text); line-height: 1.65; max-width: 100ch; text-align: center; }
 
     /* BUTTONS */
     .btn-primary {
@@ -186,7 +186,7 @@
       color: var(--white);
       text-decoration: none;
       padding: 0.8rem 1.75rem;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       border-radius: 3px;
       transition: background 0.2s, transform 0.2s;
@@ -204,7 +204,7 @@
       color: var(--blue);
       text-decoration: none;
       padding: 0.8rem 1.75rem;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       border-radius: 3px;
       margin-left: 0.75rem;
@@ -218,7 +218,7 @@
       gap: 0.4rem;
       color: var(--blue-dark);
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       border-bottom: 1px solid var(--border);
       padding: 0.2rem 0;
@@ -243,15 +243,16 @@
       margin-top: 1rem;
       color: var(--text-muted);
       max-width: 65ch;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     /* OVER MIJ */
-    #over-mij { background: var(--white); display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: start; }
+    #over-mij { background: var(--white); display: grid; grid-template-columns: 360px 1fr; gap: 3.5rem; align-items: start; }
 
     .over-photo {
-      width: 280px;
-      height: 280px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
       overflow: hidden;
       background: var(--blue-light);
@@ -266,9 +267,9 @@
     .over-photo-placeholder {
       display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;
     }
-    .over-photo-placeholder svg { width: 96px; height: 96px; opacity: 0.3; }
+    .over-photo-placeholder svg { width: 110px; height: 110px; opacity: 0.3; }
 
-    .over-text { max-width: 70ch; }
+    .over-text { max-width: 62ch; }
 
     .over-text blockquote {
       font-family: 'Merriweather', serif;
@@ -283,7 +284,7 @@
     .over-text blockquote cite {
       display: block;
       margin-top: 0.6rem;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-style: normal;
       color: var(--text-light);
       letter-spacing: 0.02em;
@@ -296,8 +297,8 @@
     .cv-timeline { list-style: none; padding: 0; }
     .cv-item { display: flex; padding: 0.5rem 0; align-items: baseline; border-bottom: 1px solid var(--border); }
     .cv-item:last-child { border-bottom: none; }
-    .cv-jaar { font-family: 'Merriweather', serif; font-size: 0.85rem; color: var(--blue); font-weight: 700; min-width: 50px; flex-shrink: 0; }
-    .cv-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; padding-left: 1rem; }
+    .cv-jaar { font-family: 'Merriweather', serif; font-size: 0.9rem; color: var(--blue); font-weight: 700; min-width: 50px; flex-shrink: 0; }
+    .cv-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; padding-left: 1rem; }
 
     /* DISCIPLINE BANNERS */
     .discipline-banner {
@@ -308,7 +309,7 @@
     .discipline-banner-lgt { background: var(--orange); }
 
     .disc-badge {
-      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
       font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 2px;
       background: rgba(255,255,255,0.2); color: var(--white); white-space: nowrap;
     }
@@ -318,7 +319,7 @@
       font-weight: 300; color: var(--white);
     }
     .disc-meta {
-      margin-left: auto; font-size: 0.78rem; line-height: 1.6;
+      margin-left: auto; font-size: 0.85rem; line-height: 1.65;
       text-align: right; max-width: 300px; color: rgba(255,255,255,0.75);
     }
     .disc-meta strong { display: block; color: var(--white); margin-bottom: 0.15rem; }
@@ -332,7 +333,7 @@
     .fysio-pillars { display: flex; flex-direction: column; gap: 1.25rem; }
     .pillar { border-left: 3px solid var(--orange); padding-left: 1.25rem; }
     .pillar-title { font-size: 0.95rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 0.25rem; }
-    .pillar-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .pillar-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; }
 
     /* THERAPIEVORMEN */
     #therapie { background: var(--white); }
@@ -349,13 +350,13 @@
     }
     .therapie-card:hover { border-top-color: var(--orange); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
 
-    .card-number { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 0.5rem; }
+    .card-number { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 0.5rem; }
     .card-title { font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 400; color: var(--blue-dark); margin-bottom: 0.3rem; }
-    .card-subtitle { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.9rem; font-weight: 600; }
-    .card-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; }
-    .card-detail { display: none; margin-top: 1rem; font-size: 0.87rem; color: var(--text-light); border-top: 1px solid var(--border); padding-top: 1rem; line-height: 1.75; }
+    .card-subtitle { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.9rem; font-weight: 600; }
+    .card-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
+    .card-detail { display: none; margin-top: 1rem; font-size: 0.95rem; color: var(--text-light); border-top: 1px solid var(--border); padding-top: 1rem; line-height: 1.8; }
     .therapie-card.open .card-detail { display: block; }
-    .card-toggle { margin-top: 0.5rem; min-height: 44px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; color: var(--blue); cursor: pointer; display: flex; align-items: center; gap: 0.4rem; background: none; border: none; font-family: 'Open Sans', sans-serif; padding: 0.5rem 0; box-sizing: border-box; }
+    .card-toggle { margin-top: 0.5rem; min-height: 44px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; color: var(--blue); cursor: pointer; display: flex; align-items: center; gap: 0.4rem; background: none; border: none; font-family: 'Open Sans', sans-serif; padding: 0.5rem 0; box-sizing: border-box; }
     .card-toggle svg { width: 14px; height: 14px; transition: transform 0.3s; }
     .therapie-card.open .card-toggle svg { transform: rotate(180deg); }
 
@@ -364,8 +365,8 @@
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; margin-bottom: 2rem; }
     .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; }
     .review-rating { color: var(--orange); font-size: 0.95rem; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-    .review-quote { font-size: 0.92rem; font-style: italic; color: var(--text-muted); line-height: 1.75; margin-bottom: 1rem; }
-    .review-naam { font-size: 0.82rem; color: var(--blue-dark); font-weight: 600; }
+    .review-quote { font-size: 0.95rem; font-style: italic; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .review-naam { font-size: 0.88rem; color: var(--blue-dark); font-weight: 600; }
 
     /* TARIEVEN */
     #tarieven { background: var(--bg); }
@@ -374,7 +375,7 @@
     .tarief-blok-fysio { border-top: 3px solid var(--blue); }
     .tarief-blok-lgt { border-top: 3px solid var(--orange); }
     .tarief-blok-label {
-      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
       font-weight: 700; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;
     }
     .tarief-blok-fysio .tarief-blok-label { color: var(--blue); }
@@ -384,27 +385,27 @@
     .tarief-blok-lgt .tarief-blok-label::before { background: var(--orange); }
     .tarief-table { width: 100%; border-collapse: collapse; }
     .tarief-table tr { border-bottom: 1px solid var(--border); }
-    .tarief-table td { padding: 0.8rem 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+    .tarief-table td { padding: 0.8rem 0.5rem; font-size: 0.95rem; color: var(--text-muted); }
     .tarief-table td:last-child { text-align: right; font-weight: 600; color: var(--text); }
-    .tarief-note { font-size: 0.8rem; color: var(--text-light); margin-top: 1rem; line-height: 1.65; }
+    .tarief-note { font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; line-height: 1.7; }
 
     .vergoeding-block { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
     .vergoeding-item h4 { font-size: 1rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
     .vergoeding-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .vd-fysio { background: var(--blue); }
     .vd-lgt { background: var(--orange); }
-    .vergoeding-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; }
+    .vergoeding-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
     .vergoeding-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
-    .badge { font-size: 0.72rem; padding: 0.25rem 0.7rem; border: 1px solid var(--border); color: var(--blue); border-radius: 3px; background: var(--blue-light); }
+    .badge { font-size: 0.78rem; padding: 0.25rem 0.7rem; border: 1px solid var(--border); color: var(--blue); border-radius: 3px; background: var(--blue-light); }
 
     /* CONTACT */
     #contact { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .contact-form-wrap { display: flex; flex-direction: column; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .form-group label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+    .form-group label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
     .form-group input, .form-group select, .form-group textarea {
       background: var(--bg); border: 1px solid var(--border); border-radius: 3px;
-      padding: 0.75rem 1rem; font-family: 'Open Sans', sans-serif; font-size: 0.92rem;
+      padding: 0.75rem 1rem; font-family: 'Open Sans', sans-serif; font-size: 0.95rem;
       color: var(--text); outline: none; transition: border-color 0.2s;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); }
@@ -413,7 +414,7 @@
     .form-submit {
       display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box;
       background: var(--blue); color: var(--white); padding: 0.85rem 2rem;
-      font-size: 0.85rem; font-weight: 600; border: none; border-radius: 3px;
+      font-size: 0.9rem; font-weight: 600; border: none; border-radius: 3px;
       cursor: pointer; font-family: 'Open Sans', sans-serif; transition: background 0.2s;
       margin-top: 0.5rem; align-self: flex-start;
     }
@@ -424,18 +425,18 @@
     .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
     .contact-icon { width: 36px; height: 36px; background: var(--blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--blue); }
     .contact-icon svg { width: 16px; height: 16px; }
-    .contact-item-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.2rem; font-weight: 600; }
+    .contact-item-label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.2rem; font-weight: 600; }
     .contact-item-value { font-size: 0.95rem; color: var(--text); }
     .contact-item-value a { color: var(--blue); text-decoration: none; }
     .opening-tijden-list { list-style: none; }
-    .opening-tijden-list li { display: flex; justify-content: space-between; gap: 1.5rem; max-width: 240px; font-size: 0.9rem; color: var(--text); padding: 0.15rem 0; }
+    .opening-tijden-list li { display: flex; justify-content: space-between; gap: 1.5rem; max-width: 240px; font-size: 0.95rem; color: var(--text); padding: 0.15rem 0; }
     .opening-tijden-list .dag { color: var(--text-muted); }
 
     /* FOOTER */
     footer {
       background: var(--blue-dark); color: rgba(255,255,255,0.55);
       padding: 2rem 8vw; display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem;
+      align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.88rem;
     }
     footer .footer-logo { font-family: 'Merriweather', serif; font-size: 1.1rem; color: var(--white); }
     footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
@@ -446,7 +447,7 @@
     .reveal.visible { opacity: 1; transform: none; }
 
     /* MOBILE */
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       #hero { grid-template-columns: 1fr; } .hero-visual { display: none; } .hero-text { padding: 6vh 6vw; }
       #over-mij { grid-template-columns: 1fr; } .over-photo { margin: 0 auto; }
       .fysio-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -506,7 +507,7 @@
 <!-- OVER MIJ -->
 <section id="over-mij">
   <div class="over-photo">
-    <img class="over-photo-img" id="cms-portretfoto" alt="" width="280" height="280" loading="lazy" />
+    <img class="over-photo-img" id="cms-portretfoto" alt="" width="320" height="320" loading="lazy" />
     <div class="over-photo-placeholder" id="cms-portretfoto-placeholder">
       <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="20" r="12" stroke="#5A94C2" stroke-width="1.5"/><path d="M8 56 C8 42 56 42 56 56" stroke="#5A94C2" stroke-width="1.5"/></svg>
     </div>
