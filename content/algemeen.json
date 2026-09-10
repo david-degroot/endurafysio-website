@@ -17,7 +17,7 @@
   "openingstijden": [
     {
       "dag": "Maandag",
-      "tijd": "08:00 – 17:00"
+      "tijd": "gesloten"
     },
     {
       "dag": "Dinsdag",
@@ -29,11 +29,11 @@
     },
     {
       "dag": "Donderdag",
-      "tijd": "08:00 – 17:00"
+      "tijd": "13:00 – 17:00"
     },
     {
       "dag": "Vrijdag",
-      "tijd": "08:00 – 15:00"
+      "tijd": "08:00 – 17:00"
     },
     {
       "dag": "Zaterdag / Zondag",
