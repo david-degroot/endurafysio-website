@@ -160,6 +160,33 @@
       font-weight: 700;
       font-size: 1rem;
     }
+    .hero-spec-link {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .hero-spec-link::after {
+      content: '→';
+      color: var(--blue);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      font-size: 0.9em;
+    }
+    .hero-spec-link:hover,
+    .hero-spec-link:focus-visible {
+      color: var(--blue);
+    }
+    .hero-spec-link:hover::after,
+    .hero-spec-link:focus-visible::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     /* INFO BAR (DTF / vergoeding LGT) */
     .info-bar {
@@ -299,6 +326,9 @@
     .cv-item:last-child { border-bottom: none; }
     .cv-jaar { font-family: 'Merriweather', serif; font-size: 0.9rem; color: var(--blue); font-weight: 700; min-width: 50px; flex-shrink: 0; }
     .cv-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; padding-left: 1rem; }
+    .cv-item.cv-extra { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; border-bottom-color: transparent; transition: max-height 0.45s ease, opacity 0.35s ease, padding 0.45s ease, border-color 0.45s ease; }
+    .cv-section.expanded .cv-item.cv-extra { max-height: 200px; opacity: 1; padding-top: 0.5rem; padding-bottom: 0.5rem; border-bottom-color: var(--border); }
+    .cv-toggle-btn { margin-top: 0.75rem; }
 
     /* DISCIPLINE BANNERS */
     .discipline-banner {
@@ -432,6 +462,15 @@
     .opening-tijden-list li { display: flex; justify-content: space-between; gap: 1.5rem; max-width: 240px; font-size: 0.95rem; color: var(--text); padding: 0.15rem 0; }
     .opening-tijden-list .dag { color: var(--text-muted); }
 
+    /* LOGO-BALK BEROEPSVERENIGINGEN */
+    .logos-balk { background: var(--bg); border-top: 1px solid var(--border); padding: 1.1rem 8vw; text-align: center; }
+    .logos-balk-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); font-weight: 600; margin-bottom: 0.6rem; }
+    .logos-balk-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2.5rem; min-height: 40px; }
+    .logos-balk-item { display: flex; align-items: center; opacity: 0.6; text-decoration: none; transition: opacity 0.2s ease; }
+    .logos-balk-item:hover { opacity: 1; }
+    .logos-balk-item img { max-height: 40px; width: auto; display: block; }
+    .logos-balk-item span { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.03em; color: var(--text-muted); }
+
     /* FOOTER */
     footer {
       background: var(--blue-dark); color: rgba(255,255,255,0.55);
@@ -492,12 +531,12 @@
       <div class="hero-spec-box">
         <h4>Gespecialiseerd in</h4>
         <ul>
-          <li>Fysiotherapie</li>
-          <li>Antroposofische fysiotherapie</li>
-          <li>Manuele Natuurgeneeskunde</li>
-          <li>FOI methode</li>
-          <li>Oefenmethode Brouw</li>
-          <li>SSP – Safe &amp; Sound Protocol</li>
+          <li><a href="#fysiotherapie" class="hero-spec-link">Fysiotherapie</a></li>
+          <li><a href="#therapie" class="hero-spec-link">Antroposofische fysiotherapie</a></li>
+          <li><a href="#therapie" class="hero-spec-link">Manuele Natuurgeneeskunde</a></li>
+          <li><a href="#therapie" class="hero-spec-link">FOI methode</a></li>
+          <li><a href="#therapie" class="hero-spec-link">Oefenmethode Brouw</a></li>
+          <li><a href="#therapie" class="hero-spec-link">SSP – Safe &amp; Sound Protocol</a></li>
         </ul>
       </div>
     </div>
@@ -532,6 +571,7 @@
         <li class="cv-item"><span class="cv-jaar">20XX</span><span class="cv-desc">Certificering Methode Brouw</span></li>
         <li class="cv-item"><span class="cv-jaar">20XX</span><span class="cv-desc">Start eigen praktijk Endura</span></li>
       </ul>
+      <button type="button" class="card-toggle cv-toggle-btn" id="cv-toggle-btn" onclick="toggleCvList()">Toon volledige achtergrond →</button>
     </div>
   </div>
 </section>
@@ -738,7 +778,7 @@
           <p class="contact-item-label">Social media</p>
           <p class="contact-item-value">
             <a href="#" id="cms-linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            &nbsp;·&nbsp;
+            <span id="cms-social-sep">&nbsp;·&nbsp;</span>
             <a href="#" id="cms-facebook-link" target="_blank" rel="noopener noreferrer">Facebook</a>
           </p>
         </div>
@@ -773,8 +813,24 @@
       <button type="submit" class="form-submit">Verstuur bericht →</button>
       <p id="form-success" style="display:none; color:var(--blue); font-size:0.9rem; margin-top:0.5rem;">✓ Bedankt! Ik neem snel contact met u op.</p>
     </form>
+    <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-light);">
+      <a href="privacy.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">Lees onze privacyverklaring</a>
+      &nbsp;·&nbsp;
+      <a href="klachtenregeling.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">Klachtenregeling</a>
+    </p>
   </div>
 </section>
+
+<!-- LOGO-BALK BEROEPSVERENIGINGEN -->
+<div class="logos-balk">
+  <div class="logos-balk-label">Geregistreerd bij</div>
+  <div class="logos-balk-row" id="cms-logos-balk">
+    <a class="logos-balk-item" href="https://www.kngf.nl" target="_blank" rel="noopener noreferrer"><span>KNGF</span></a>
+    <a class="logos-balk-item" href="https://vbag.nl" target="_blank" rel="noopener noreferrer"><span>VBAG</span></a>
+    <a class="logos-balk-item" href="https://rbcz.nl" target="_blank" rel="noopener noreferrer"><span>RBCZ</span></a>
+    <a class="logos-balk-item" href="https://nvaz.nl" target="_blank" rel="noopener noreferrer"><span>NVAZ</span></a>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -794,6 +850,26 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   function toggleCard(card) { card.classList.toggle('open'); }
+
+  // ── CV-tijdlijn: toon standaard 3 items, rest achter toggle-knop ──
+  function initCvToggle() {
+    const list = document.getElementById('cms-cv-list');
+    const section = document.querySelector('.cv-section');
+    const btn = document.getElementById('cv-toggle-btn');
+    if (!list || !section || !btn) return;
+    const items = Array.from(list.querySelectorAll('.cv-item'));
+    items.forEach((li, i) => li.classList.toggle('cv-extra', i >= 2));
+    section.classList.remove('expanded');
+    btn.textContent = 'Toon volledige achtergrond →';
+    btn.style.display = items.length > 2 ? 'flex' : 'none';
+  }
+  function toggleCvList() {
+    const section = document.querySelector('.cv-section');
+    const btn = document.getElementById('cv-toggle-btn');
+    const expanded = section.classList.toggle('expanded');
+    btn.textContent = expanded ? 'Minder tonen ↑' : 'Toon volledige achtergrond →';
+  }
+  initCvToggle();
   function handleSubmit(e) {
     e.preventDefault();
     document.getElementById('form-success').style.display = 'block';
@@ -849,13 +925,24 @@
           info.innerHTML = `© ${jaar} ${d.praktijknaam} · ${stad} · <a href="mailto:${email}">${email}</a>`;
         }
       }
-      if (d.linkedin_url) {
-        const el = document.getElementById('cms-linkedin-link');
-        if (el) el.href = d.linkedin_url;
-      }
-      if (d.facebook_url) {
-        const el = document.getElementById('cms-facebook-link');
-        if (el) el.href = d.facebook_url;
+      const setSocialLink = (id, url) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const trimmed = (url || '').trim();
+        if (!trimmed || trimmed.includes('#')) {
+          el.style.display = 'none';
+        } else {
+          el.href = trimmed;
+        }
+      };
+      setSocialLink('cms-linkedin-link', d.linkedin_url);
+      setSocialLink('cms-facebook-link', d.facebook_url);
+      const linkedinEl = document.getElementById('cms-linkedin-link');
+      const facebookEl = document.getElementById('cms-facebook-link');
+      const sepEl = document.getElementById('cms-social-sep');
+      if (sepEl && linkedinEl && facebookEl) {
+        const bothVisible = linkedinEl.style.display !== 'none' && facebookEl.style.display !== 'none';
+        sepEl.style.display = bothVisible ? '' : 'none';
       }
       if (d.banner_fysio_meta) {
         const el = document.getElementById('cms-banner-fysio-meta');
@@ -1024,9 +1111,12 @@
       const d = await res.json();
       if (Array.isArray(d.items) && d.items.length) {
         const list = document.getElementById('cms-cv-list');
-        if (list) list.innerHTML = d.items.map(item =>
-          `<li class="cv-item"><span class="cv-jaar">${item.jaar}</span><span class="cv-desc">${item.beschrijving}</span></li>`
-        ).join('');
+        if (list) {
+          list.innerHTML = d.items.map(item =>
+            `<li class="cv-item"><span class="cv-jaar">${item.jaar}</span><span class="cv-desc">${item.beschrijving}</span></li>`
+          ).join('');
+          initCvToggle();
+        }
       }
     } catch (e) {
       console.warn('[CMS] cv.json kon niet worden geladen, statische tekst blijft staan.', e);
@@ -1053,6 +1143,31 @@
       }
     } catch (e) {
       console.warn('[CMS] reviews.json kon niet worden geladen, statische tekst blijft staan.', e);
+    }
+
+    // logos.json → Logo-balk beroepsverenigingen
+    try {
+      const res = await fetch('content/logos.json');
+      if (!res.ok) throw new Error(res.status);
+      const d = await res.json();
+      if (Array.isArray(d.logos) && d.logos.length) {
+        const row = document.getElementById('cms-logos-balk');
+        if (row) {
+          row.innerHTML = d.logos.map(l => {
+            const naam = l.naam || '';
+            const afbeelding = (l.afbeelding || '').trim();
+            const inner = afbeelding
+              ? `<img src="${afbeelding}" alt="${naam}" loading="lazy" />`
+              : `<span>${naam}</span>`;
+            const url = (l.url || '').trim();
+            return url
+              ? `<a class="logos-balk-item" href="${url}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+              : `<span class="logos-balk-item">${inner}</span>`;
+          }).join('');
+        }
+      }
+    } catch (e) {
+      console.warn('[CMS] logos.json kon niet worden geladen, statische tekst blijft staan.', e);
     }
   }
 

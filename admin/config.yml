@@ -156,3 +156,18 @@ collections:
               - { label: "Naam", name: "naam", widget: "string" }
               - { label: "Quote", name: "quote", widget: "text" }
               - { label: "Beoordeling (1-5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+
+  - name: "logos"
+    label: "Beroepsvereniging logo's"
+    files:
+      - name: "logos"
+        label: "Logo's"
+        file: "content/logos.json"
+        fields:
+          - label: "Logos"
+            name: "logos"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "naam", widget: "string" }
+              - { label: "Afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Zolang hier niets is geüpload, wordt de naam als tekst getoond." }
+              - { label: "URL", name: "url", widget: "string", required: false }
