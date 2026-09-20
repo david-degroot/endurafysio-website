@@ -1,8 +1,24 @@
 {
   "logos": [
-    { "naam": "KNGF", "afbeelding": "", "url": "https://www.kngf.nl" },
-    { "naam": "VBAG", "afbeelding": "", "url": "https://vbag.nl" },
-    { "naam": "RBCZ", "afbeelding": "", "url": "https://rbcz.nl" },
-    { "naam": "NVAZ", "afbeelding": "", "url": "https://nvaz.nl" }
+    {
+      "naam": "KNGF",
+      "afbeelding": "",
+      "url": "https://www.kngf.nl"
+    },
+    {
+      "naam": "VBAG",
+      "afbeelding": "/images/vbag_logo-witte-achtergrond-klein-1-.jpg",
+      "url": "https://vbag.nl"
+    },
+    {
+      "naam": "RBCZ",
+      "afbeelding": "/images/rbcz-logo-voor-lichte-achtergrond.jpg",
+      "url": "https://rbcz.nl"
+    },
+    {
+      "naam": "NVAZ",
+      "afbeelding": "",
+      "url": "https://nvaz.nl"
+    }
   ]
 }
