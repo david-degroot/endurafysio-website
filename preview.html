@@ -524,7 +524,7 @@
     <span class="hero-eyebrow" id="cms-stad">Solopraktijk · Arnhem &amp; Nijmegen</span>
     <h1 class="hero-title" id="cms-hero-kop">Fysiotherapie en lichaamsgerichte therapie</h1>
     <p class="hero-sub" id="cms-hero-subkop">Twee disciplines, één therapeut. Directe toegang, zonder verwijzing.</p>
-    <a href="#contact" class="btn-primary" id="cms-hero-knop-tekst">Plan een afspraak</a>
+    <a href="#contact" class="btn-primary" id="cms-hero-knop-tekst">Maak een afspraak</a>
   </div>
   <div class="hero-visual">
     <div class="hero-visual-inner">
@@ -533,9 +533,9 @@
         <ul>
           <li><a href="#fysiotherapie" class="hero-spec-link">Fysiotherapie</a></li>
           <li><a href="#therapie" class="hero-spec-link">Antroposofische fysiotherapie</a></li>
-          <li><a href="#therapie" class="hero-spec-link">Manuele Natuurgeneeskunde</a></li>
-          <li><a href="#therapie" class="hero-spec-link">FOI methode</a></li>
           <li><a href="#therapie" class="hero-spec-link">Oefenmethode Brouw</a></li>
+          <li><a href="#therapie" class="hero-spec-link">FOI methode</a></li>
+          <li><a href="#therapie" class="hero-spec-link">BodyStress FREE</a></li>
           <li><a href="#therapie" class="hero-spec-link">SSP – Safe &amp; Sound Protocol</a></li>
         </ul>
       </div>
@@ -587,7 +587,6 @@
 <section id="fysiotherapie">
   <div class="section-header reveal">
     <h2>Fysiotherapie</h2>
-    <p>Een erkende, BIG-geregistreerde zorgvorm met een eigen vergoedingsstructuur.</p>
   </div>
   <div class="fysio-grid">
     <div class="fysio-vision reveal">
@@ -595,7 +594,7 @@
       <p id="cms-fysio-alinea1">Mijn aanpak valt binnen de afgesproken standaarden van de reguliere fysiotherapie, maar is gekleurd door mijn eigen scholingsweg. Ik werk met manuele technieken, oefentherapie en massage — maar altijd vanuit een diepere luisterhouding.</p>
       <p id="cms-fysio-alinea2">Ik geloof dat duurzaam herstel vraagt om aandacht voor de bredere context: leefstijl, stress, ademhaling en bewustzijn.</p>
       <p id="cms-fysio-alinea3">Ik werk zonder contract met zorgverzekeraars — dat betekent niet dat u geen recht op vergoeding hebt. Met een aanvullende verzekering kunt u de nota indienen en krijgt u een deel vergoed.</p>
-      <a href="#contact" class="btn-secondary" style="margin-top:1.25rem; margin-left:0;">Kennismakingsgesprek aanvragen</a>
+      <a href="#contact" class="btn-secondary" style="margin-top:1.25rem; margin-left:0;">Maak een afspraak</a>
     </div>
     <div class="fysio-pillars reveal" id="cms-pillars-container">
       <div class="pillar"><div class="pillar-title">Erkende zorgvorm</div><div class="pillar-text">BIG-geregistreerd en te declareren bij de zorgverzekeraar met AGB-code. Gescheiden van de lichaamsgerichte therapie.</div></div>
@@ -790,15 +789,16 @@
     </div>
   </div>
   <div class="reveal">
-    <form class="contact-form-wrap" onsubmit="handleSubmit(event)">
+    <form class="contact-form-wrap" id="contact-form">
+      <div data-fs-error></div>
       <div class="form-row">
-        <div class="form-group"><label for="naam">Naam</label><input type="text" id="naam" placeholder="Uw naam" required /></div>
-        <div class="form-group"><label for="email2">E-mail</label><input type="email" id="email2" placeholder="uw@email.nl" required /></div>
+        <div class="form-group"><label for="naam">Naam</label><input type="text" id="naam" name="naam" placeholder="Uw naam" required /></div>
+        <div class="form-group"><label for="email2">E-mail</label><input type="email" id="email2" name="email" placeholder="uw@email.nl" required /></div>
       </div>
-      <div class="form-group"><label for="tel">Telefoon (optioneel)</label><input type="tel" id="tel" placeholder="06-00000000" /></div>
+      <div class="form-group"><label for="tel">Telefoon (optioneel)</label><input type="tel" id="tel" name="telefoon" placeholder="06-00000000" /></div>
       <div class="form-group">
         <label for="onderwerp">Ik ben geïnteresseerd in</label>
-        <select id="onderwerp">
+        <select id="onderwerp" name="onderwerp">
           <option value="">Selecteer...</option>
           <optgroup label="Fysiotherapie"><option>Fysiotherapie</option></optgroup>
           <optgroup label="Lichaamsgerichte therapie">
@@ -809,9 +809,9 @@
           <option>Combinatietraject</option><option>Ik weet het nog niet</option>
         </select>
       </div>
-      <div class="form-group"><label for="bericht">Bericht</label><textarea id="bericht" placeholder="Uw vraag of verzoek..."></textarea></div>
-      <button type="submit" class="form-submit">Verstuur bericht →</button>
-      <p id="form-success" style="display:none; color:var(--blue); font-size:0.9rem; margin-top:0.5rem;">✓ Bedankt! Ik neem snel contact met u op.</p>
+      <div class="form-group"><label for="bericht">Bericht</label><textarea id="bericht" name="bericht" placeholder="Uw vraag of verzoek..."></textarea></div>
+      <button type="submit" class="form-submit" data-fs-submit-btn>Verstuur bericht →</button>
+      <div data-fs-success>✓ Bedankt! Ik neem snel contact met u op.</div>
     </form>
     <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-light);">
       <a href="privacy.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">Lees onze privacyverklaring</a>
@@ -870,11 +870,10 @@
     btn.textContent = expanded ? 'Minder tonen ↑' : 'Toon volledige achtergrond →';
   }
   initCvToggle();
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('form-success').style.display = 'block';
-    e.target.reset();
-  }
+
+  // ── Formspree contactformulier ──
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'moeveqpa' });
 
   // ── CMS content loader ──
   // Each fetch is independent: a single failure leaves all other sections intact.
@@ -1173,5 +1172,6 @@
 
   loadCMS();
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
