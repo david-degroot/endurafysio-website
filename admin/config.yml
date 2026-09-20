@@ -29,6 +29,7 @@ collections:
           - { label: "Hero subkop (patiëntgericht)", name: "hero_subkop", widget: "text" }
           - { label: "Hero knoptekst", name: "hero_knop_tekst", widget: "string" }
           - { label: "Hero knop link", name: "hero_knop_link", widget: "string", hint: "Paginaanker (bv. #contact) of volledige URL" }
+          - { label: "Home foto", name: "home_foto", widget: "image", required: false, hint: "Sfeerfoto rechts in de hero van preview.html. Zolang hier niets is geüpload, blijft de lichtblauwe achtergrond zichtbaar." }
           - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
           - { label: "Facebook URL", name: "facebook_url", widget: "string" }
           - { label: "Banner fysiotherapie (metatekst)", name: "banner_fysio_meta", widget: "text" }

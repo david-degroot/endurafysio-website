@@ -120,15 +120,29 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
     }
 
     .hero-visual-inner {
       text-align: center;
       padding: 2rem;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-spec-box {
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 1.5rem 1.8rem;
@@ -527,6 +541,7 @@
     <a href="#contact" class="btn-primary" id="cms-hero-knop-tekst">Maak een afspraak</a>
   </div>
   <div class="hero-visual">
+    <img class="hero-visual-img" id="cms-home-foto" alt="" />
     <div class="hero-visual-inner">
       <div class="hero-spec-box">
         <h4>Gespecialiseerd in</h4>
@@ -893,6 +908,15 @@
       if (d.hero_subkop) {
         const el = document.getElementById('cms-hero-subkop');
         if (el) el.textContent = d.hero_subkop;
+      }
+      if (d.home_foto) {
+        const img = document.getElementById('cms-home-foto');
+        if (img) {
+          // Bij een laadfout blijft de lichtblauwe achtergrond van .hero-visual zichtbaar
+          img.addEventListener('error', () => { img.style.display = 'none'; });
+          img.addEventListener('load', () => { img.style.display = 'block'; });
+          img.src = d.home_foto;
+        }
       }
       if (d.hero_knop_tekst || d.hero_knop_link) {
         const el = document.getElementById('cms-hero-knop-tekst');
